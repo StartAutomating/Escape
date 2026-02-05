@@ -28,6 +28,24 @@ $e = [char]27
 
                     </Script>
       </ScriptMethod>
+      <ScriptMethod>
+        <Name>bold</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Bold Escape Sequence
+.DESCRIPTION
+    Escape Sequence for Bold (high intensity) text
+.LINK
+    https://en.wikipedia.org/wiki/ANSI_escape_code
+#&gt;
+param()
+
+$e = [char]27
+"$e[1m"
+
+                    </Script>
+      </ScriptMethod>
     </Members>
   </Type>
 </Types>
