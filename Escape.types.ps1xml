@@ -57,6 +57,29 @@ if ($rapid) {
                     </Script>
       </ScriptMethod>
       <ScriptMethod>
+        <Name>blinkOff</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Blink Escape Sequence
+.DESCRIPTION
+    Escape Sequence for blink
+.LINK
+    https://en.wikipedia.org/wiki/ANSI_escape_code
+#&gt;
+param(
+[switch]
+$Rapid
+)
+
+$e = [char]27
+"$e[25m"
+
+
+
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
         <Name>bold</Name>
         <Script>
                         &lt;#
