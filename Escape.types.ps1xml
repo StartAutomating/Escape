@@ -46,6 +46,27 @@ $e = [char]27
 
                     </Script>
       </ScriptMethod>
+      <ScriptMethod>
+        <Name>conceal</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Conceal Escape Sequence
+.DESCRIPTION
+    Escape Sequence for concealed content
+.LINK
+    https://en.wikipedia.org/wiki/ANSI_escape_code
+#&gt;
+param(
+)
+
+$e = [char]27
+"$e[8m"
+
+
+
+                    </Script>
+      </ScriptMethod>
     </Members>
   </Type>
 </Types>
