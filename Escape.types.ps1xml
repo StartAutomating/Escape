@@ -310,6 +310,24 @@ if ($CellCount -gt 0) {
                     </Script>
       </ScriptMethod>
       <ScriptMethod>
+        <Name>doubleUnderline</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Double Underline Escape Sequence
+.DESCRIPTION
+    Escape Sequence for double underline
+.LINK
+    https://en.wikipedia.org/wiki/ANSI_escape_code
+#&gt;
+param()
+
+$e = [char]27
+"$e[21m"
+
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
         <Name>html</Name>
         <Script>
                         &lt;#
