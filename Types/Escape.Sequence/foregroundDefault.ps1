@@ -7,4 +7,4 @@
     https://en.wikipedia.org/wiki/ANSI_escape_code
 #>
 $e = [char]27
-"$e[30m"
+"$e[39m"
