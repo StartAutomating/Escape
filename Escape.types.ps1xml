@@ -310,6 +310,46 @@ if ($CellCount -gt 0) {
                     </Script>
       </ScriptMethod>
       <ScriptMethod>
+        <Name>html</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+
+.DESCRIPTION
+
+.EXAMPLE
+    ./html.escape.ps1 "&lt;escape this tag&gt;"
+#&gt;
+param(
+[string]
+$Content = "$($this.Input)"
+)
+
+[Web.HttpUtility]::HtmlEncode($Content)
+
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>htmlAttribute</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Escapes html attributes
+.DESCRIPTION
+    Escapes content for encoding into an html attribute.
+.EXAMPLE
+    ./html.escape.ps1 "&lt;escape this tag&gt;"
+#&gt;
+param(
+[string]
+$Content = "$($this.Content)"
+)
+
+[Web.HttpUtility]::HtmlAttributeEncode($Content)
+
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
         <Name>reset</Name>
         <Script>
                         &lt;#
