@@ -115,6 +115,201 @@ $e = [char]27
                     </Script>
       </ScriptMethod>
       <ScriptMethod>
+        <Name>cursorBackward</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Cursor Backward Escape Sequence
+.DESCRIPTION
+    Escape Sequence to move the cursor backward
+.LINK
+    https://en.wikipedia.org/wiki/ANSI_escape_code
+#&gt;
+param(
+# The number of cells to move
+[int]$CellCount = $(
+    if ("$($this.input)" -as [int]) {
+        "$($this.input)"
+    } else {
+        1
+    }
+)    
+)
+
+$e = [char]27
+if ($CellCount -lt 0) {
+    "$e[${CellCount}C"
+} else {
+    "$e[${CellCount}D"
+}
+
+
+
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>cursorDown</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Cursor Down Escape Sequence
+.DESCRIPTION
+    Escape Sequence to move the cursor down
+.LINK
+    https://en.wikipedia.org/wiki/ANSI_escape_code
+#&gt;
+param(
+# The number of cells to move.
+[int]$CellCount = $(
+    if ("$($this.input)" -as [int]) {
+        "$($this.input)"
+    } else {
+        1
+    }
+)    
+)
+
+$e = [char]27
+if ($CellCount -lt 0) {
+    "$e[${CellCount}A"
+} else {
+    "$e[${CellCount}B"
+}
+
+
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>cursorForward</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Cursor Forward Escape Sequence
+.DESCRIPTION
+    Escape Sequence to move the cursor forward
+.LINK
+    https://en.wikipedia.org/wiki/ANSI_escape_code
+#&gt;
+param(
+# The number of cells to move.
+[int]$CellCount = $(
+    if ("$($this.input)" -as [int]) {
+        "$($this.input)"
+    } else {
+        1
+    }
+)    
+)
+
+
+$e = [char]27
+if ($CellCount -ge 0) {
+    "$e[${CellCount}C"
+} else {
+    "$e[${CellCount}D"
+}
+
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>cursorNextLine</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Cursor Next Line Escape Sequence
+.DESCRIPTION
+    Escape Sequence to move the cursor to the next line
+.LINK
+    https://en.wikipedia.org/wiki/ANSI_escape_code
+#&gt;
+param(
+# The number of cells to move.
+[int]$LineCount = $(
+    if ("$($this.input)" -as [int]) {
+        "$($this.input)"
+    } else {
+        1
+    }
+)    
+)
+
+
+$e = [char]27
+if ($LineCount -gt 0) {
+    "$e[${LineCount}E"
+} else {
+    "$e[${LineCount}F"
+}
+
+
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>cursorPreviousLine</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Cursor Next Line Escape Sequence
+.DESCRIPTION
+    Escape Sequence to move the cursor to the next line
+.LINK
+    https://en.wikipedia.org/wiki/ANSI_escape_code
+#&gt;
+param(
+# The number of cells to move.
+[int]$LineCount = $(
+    if ("$($this.input)" -as [int]) {
+        "$($this.input)"
+    } else {
+        1
+    }
+)    
+)
+
+
+$e = [char]27
+if ($LineCount -lt 0) {
+    "$e[${LineCount}E"
+} else {
+    "$e[${LineCount}F"
+}
+
+
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>cursorUp</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Cursor Up Escape Sequence
+.DESCRIPTION
+    Escape Sequence to move the cursor up
+.LINK
+    https://en.wikipedia.org/wiki/ANSI_escape_code
+#&gt;
+param(
+# The number of cells to move.
+[int]$CellCount = $(
+    if ("$($this.input)" -as [int]) {
+        "$($this.input)"
+    } else {
+        1
+    }
+)    
+)
+
+$e = [char]27
+if ($CellCount -gt 0) {
+    "$e[${CellCount}A"
+} else {
+    "$e[${CellCount}B"
+}
+
+
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
         <Name>reverse</Name>
         <Script>
                         &lt;#
