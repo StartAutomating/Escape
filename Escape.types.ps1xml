@@ -96,6 +96,25 @@ $e = [char]27
                     </Script>
       </ScriptMethod>
       <ScriptMethod>
+        <Name>crossout</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Crossout Escape Sequence
+.DESCRIPTION
+    Escape Sequence for crossed out text
+.LINK
+    https://en.wikipedia.org/wiki/ANSI_escape_code
+#&gt;
+param()
+
+$e = [char]27
+"$e[9m"
+
+
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
         <Name>reverse</Name>
         <Script>
                         &lt;#
