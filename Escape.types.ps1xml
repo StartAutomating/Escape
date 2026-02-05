@@ -407,6 +407,26 @@ $e = [char]27
 
                     </Script>
       </ScriptMethod>
+      <ScriptMethod>
+        <Name>xml</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Escapes xml
+.DESCRIPTION
+    Escapes content into valid xml content.
+.EXAMPLE
+    ./xml.ps1 "&lt;not a tag&gt;"
+#&gt;
+param(
+[string]
+$Content = "$($this.Input)"
+)
+
+[Web.HttpUtility]::HtmlEncode($Content)
+
+                    </Script>
+      </ScriptMethod>
     </Members>
   </Type>
 </Types>
