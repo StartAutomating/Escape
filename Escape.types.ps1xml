@@ -1,0 +1,33 @@
+<!-- Generated with EZOut 2.0.6: Install-Module EZOut or https://github.com/StartAutomating/EZOut -->
+<Types>
+  <Type>
+    <Name>Escape.Sequence</Name>
+    <Members>
+      <ScriptMethod>
+        <Name>alternativeFont</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Alternate Font Escape Sequence
+.DESCRIPTION
+    Escape Sequence for alternate font selection
+.LINK
+    https://en.wikipedia.org/wiki/ANSI_escape_code
+.NOTES
+    This functionality is not supported in all terminals.
+#&gt;
+param(
+# The alternative font number.
+[ValidateRange(1,10)]
+[int]$FontNumber = "$($this.input)"
+)
+
+$e = [char]27
+"$e[$(10 + $fontNumber)m"
+
+
+                    </Script>
+      </ScriptMethod>
+    </Members>
+  </Type>
+</Types>
