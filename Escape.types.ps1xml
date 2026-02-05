@@ -329,6 +329,24 @@ $e = [char]27
 
                     </Script>
       </ScriptMethod>
+      <ScriptMethod>
+        <Name>underline</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Underline Escape Sequence
+.DESCRIPTION
+    Escape Sequence for underline
+.LINK
+    https://en.wikipedia.org/wiki/ANSI_escape_code
+#&gt;
+param()
+
+$e = [char]27
+"$e[4m"
+
+                    </Script>
+      </ScriptMethod>
     </Members>
   </Type>
 </Types>
