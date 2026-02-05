@@ -138,6 +138,25 @@ $e = [char]27
                     </Script>
       </ScriptMethod>
       <ScriptMethod>
+        <Name>crossoutOff</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Crossout Off Escape Sequence
+.DESCRIPTION
+    Escape Sequence for stopping cross out text
+.LINK
+    https://en.wikipedia.org/wiki/ANSI_escape_code
+#&gt;
+param()
+
+$e = [char]27
+"$e[29m"
+
+
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
         <Name>cursorBackward</Name>
         <Script>
                         &lt;#
