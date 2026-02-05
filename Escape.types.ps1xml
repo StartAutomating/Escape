@@ -474,6 +474,27 @@ $e = [char]27
                     </Script>
       </ScriptMethod>
       <ScriptMethod>
+        <Name>reveal</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Reveal Escape Sequence
+.DESCRIPTION
+    Escape Sequence for to disable concealed content
+.LINK
+    https://en.wikipedia.org/wiki/ANSI_escape_code
+#&gt;
+param(
+)
+
+$e = [char]27
+"$e[28m"
+
+
+
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
         <Name>reverse</Name>
         <Script>
                         &lt;#
