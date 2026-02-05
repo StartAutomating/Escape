@@ -418,6 +418,22 @@ $e = [char]27
                     </Script>
       </ScriptMethod>
       <ScriptMethod>
+        <Name>foregroundDefault</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Foreground default Escape Sequence
+.DESCRIPTION
+    Escape Sequence to set foreground to the default.  
+.LINK
+    https://en.wikipedia.org/wiki/ANSI_escape_code
+#&gt;
+$e = [char]27
+"$e[30m"
+
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
         <Name>foregroundGreen</Name>
         <Script>
                         &lt;#
