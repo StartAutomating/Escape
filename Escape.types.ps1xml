@@ -29,6 +29,134 @@ $e = [char]27
                     </Script>
       </ScriptMethod>
       <ScriptMethod>
+        <Name>backgroundBlack</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Background Black Escape Sequence
+.DESCRIPTION
+    Escape Sequence to set Background to Black  
+.LINK
+    https://en.wikipedia.org/wiki/ANSI_escape_code
+#&gt;
+$e = [char]27
+"$e[40m"
+
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>backgroundBlue</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Background Blue Escape Sequence
+.DESCRIPTION
+    Escape Sequence to set Background to Blue  
+.LINK
+    https://en.wikipedia.org/wiki/ANSI_escape_code
+#&gt;
+$e = [char]27
+"$e[44m"
+
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>backgroundCyan</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Background Cyan Escape Sequence
+.DESCRIPTION
+    Escape Sequence to set Background to Cyan  
+.LINK
+    https://en.wikipedia.org/wiki/ANSI_escape_code
+#&gt;
+$e = [char]27
+"$e[46m"
+
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>backgroundGreen</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Background Green Escape Sequence
+.DESCRIPTION
+    Escape Sequence to set Background to Green  
+.LINK
+    https://en.wikipedia.org/wiki/ANSI_escape_code
+#&gt;
+$e = [char]27
+"$e[42m"
+
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>backgroundPurple</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Background Purple Escape Sequence
+.DESCRIPTION
+    Escape Sequence to set Background to Purple  
+.LINK
+    https://en.wikipedia.org/wiki/ANSI_escape_code
+#&gt;
+$e = [char]27
+"$e[45m"
+
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>backgroundRed</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Background Red Escape Sequence
+.DESCRIPTION
+    Escape Sequence to set Background to Red  
+.LINK
+    https://en.wikipedia.org/wiki/ANSI_escape_code
+#&gt;
+$e = [char]27
+"$e[41m"
+
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>backgroundWhite</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Background White Escape Sequence
+.DESCRIPTION
+    Escape Sequence to set Background to White  
+.LINK
+    https://en.wikipedia.org/wiki/ANSI_escape_code
+#&gt;
+$e = [char]27
+"$e[47m"
+
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>backgroundYellow</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Background Yellow Escape Sequence
+.DESCRIPTION
+    Escape Sequence to set Background to Yellow  
+.LINK
+    https://en.wikipedia.org/wiki/ANSI_escape_code
+#&gt;
+$e = [char]27
+"$e[43m"
+
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
         <Name>blink</Name>
         <Script>
                         &lt;#
