@@ -370,6 +370,134 @@ $e = [char]27
                     </Script>
       </ScriptMethod>
       <ScriptMethod>
+        <Name>foregroundBlack</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Foreground Black Escape Sequence
+.DESCRIPTION
+    Escape Sequence to set Foreground to Black  
+.LINK
+    https://en.wikipedia.org/wiki/ANSI_escape_code
+#&gt;
+$e = [char]27
+"$e[30m"
+
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>foregroundBlue</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Foreground Blue Escape Sequence
+.DESCRIPTION
+    Escape Sequence to set Foreground to Blue  
+.LINK
+    https://en.wikipedia.org/wiki/ANSI_escape_code
+#&gt;
+$e = [char]27
+"$e[34m"
+
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>foregroundCyan</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Foreground Cyan Escape Sequence
+.DESCRIPTION
+    Escape Sequence to set Foreground to Cyan  
+.LINK
+    https://en.wikipedia.org/wiki/ANSI_escape_code
+#&gt;
+$e = [char]27
+"$e[36m"
+
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>foregroundGreen</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Foreground Green Escape Sequence
+.DESCRIPTION
+    Escape Sequence to set Foreground to Green  
+.LINK
+    https://en.wikipedia.org/wiki/ANSI_escape_code
+#&gt;
+$e = [char]27
+"$e[32m"
+
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>foregroundPurple</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Foreground Purple Escape Sequence
+.DESCRIPTION
+    Escape Sequence to set Foreground to Purple  
+.LINK
+    https://en.wikipedia.org/wiki/ANSI_escape_code
+#&gt;
+$e = [char]27
+"$e[35m"
+
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>foregroundRed</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Foreground Red Escape Sequence
+.DESCRIPTION
+    Escape Sequence to set Foreground to Red  
+.LINK
+    https://en.wikipedia.org/wiki/ANSI_escape_code
+#&gt;
+$e = [char]27
+"$e[31m"
+
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>foregroundWhite</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Foreground White Escape Sequence
+.DESCRIPTION
+    Escape Sequence to set Foreground to White  
+.LINK
+    https://en.wikipedia.org/wiki/ANSI_escape_code
+#&gt;
+$e = [char]27
+"$e[37m"
+
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>foregroundYellow</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Foreground Yellow Escape Sequence
+.DESCRIPTION
+    Escape Sequence to set Foreground to Yellow  
+.LINK
+    https://en.wikipedia.org/wiki/ANSI_escape_code
+#&gt;
+$e = [char]27
+"$e[33m"
+
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
         <Name>html</Name>
         <Script>
                         &lt;#
