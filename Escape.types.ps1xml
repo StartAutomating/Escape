@@ -95,6 +95,26 @@ $e = [char]27
 
                     </Script>
       </ScriptMethod>
+      <ScriptMethod>
+        <Name>reverse</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Invert Escape Sequence
+.DESCRIPTION
+    Escape Sequence for invert
+.LINK
+    https://en.wikipedia.org/wiki/ANSI_escape_code
+#&gt;
+param(
+)
+
+$e = [char]27
+"$e[7m"
+
+
+                    </Script>
+      </ScriptMethod>
     </Members>
   </Type>
 </Types>
