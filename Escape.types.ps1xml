@@ -368,6 +368,24 @@ $Content = "$($this.Content)"
                     </Script>
       </ScriptMethod>
       <ScriptMethod>
+        <Name>italicOff</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Italic Off Escape Sequence
+.DESCRIPTION
+    Escape Sequence for italics off
+.LINK
+    https://en.wikipedia.org/wiki/ANSI_escape_code
+#&gt;
+param()
+
+$e = [char]27
+"$e[23m"
+
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
         <Name>normalIntensity</Name>
         <Script>
                         &lt;#
