@@ -494,6 +494,26 @@ $e = [char]27
                     </Script>
       </ScriptMethod>
       <ScriptMethod>
+        <Name>reverseOff</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Reverse Off Escape Sequence
+.DESCRIPTION
+    Escape Sequence for stopping color reversal (inversion) in text
+.LINK
+    https://en.wikipedia.org/wiki/ANSI_escape_code
+#&gt;
+param(
+)
+
+$e = [char]27
+"$e[27m"
+
+
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
         <Name>underline</Name>
         <Script>
                         &lt;#
