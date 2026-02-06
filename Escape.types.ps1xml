@@ -514,6 +514,26 @@ $e = [char]27
                     </Script>
       </ScriptMethod>
       <ScriptMethod>
+        <Name>encircled</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Encircled Escape Sequence
+.DESCRIPTION
+    Escape Sequence for encircled
+.LINK
+    https://en.wikipedia.org/wiki/ANSI_escape_code
+.NOTES
+    Not supported by most terminals.  Used for Emoji variation selection in mintty.
+#&gt;
+param()
+
+$e = [char]27
+"$e[52m"
+
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
         <Name>foregroundBlack</Name>
         <Script>
                         &lt;#
