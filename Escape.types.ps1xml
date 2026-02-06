@@ -658,6 +658,26 @@ $e = [char]27
                     </Script>
       </ScriptMethod>
       <ScriptMethod>
+        <Name>framed</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Framed Escape Sequence
+.DESCRIPTION
+    Escape Sequence for framed
+.LINK
+    https://en.wikipedia.org/wiki/ANSI_escape_code
+.NOTES
+    Not supported by most terminals.  Used for Emoji variation selection in mintty
+#&gt;
+param()
+
+$e = [char]27
+"$e[51m"
+
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
         <Name>html</Name>
         <Script>
                         &lt;#
