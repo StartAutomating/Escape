@@ -881,6 +881,26 @@ $e = [char]27
                     </Script>
       </ScriptMethod>
       <ScriptMethod>
+        <Name>normalscript</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Normal Script Escape Sequence
+.DESCRIPTION
+    Escape Sequence for neither superscript not subscript
+.LINK
+    https://en.wikipedia.org/wiki/ANSI_escape_code
+.NOTES
+    Implemented in mintty
+#&gt;
+param()
+
+$e = [char]27
+"$e[75m"
+
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
         <Name>notFramed</Name>
         <Script>
                         &lt;#
@@ -1119,6 +1139,46 @@ if ($PageCount -ge 0) {
     "$e[${PageCount}T"
 }
 
+
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>subscript</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Subscript Escape Sequence
+.DESCRIPTION
+    Escape Sequence for subscript
+.LINK
+    https://en.wikipedia.org/wiki/ANSI_escape_code
+.NOTES
+    Implemented in mintty
+#&gt;
+param()
+
+$e = [char]27
+"$e[74m"
+
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>superscript</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Superscript Escape Sequence
+.DESCRIPTION
+    Escape Sequence for superscript
+.LINK
+    https://en.wikipedia.org/wiki/ANSI_escape_code
+.NOTES
+    Implemented in mintty
+#&gt;
+param()
+
+$e = [char]27
+"$e[73m"
 
                     </Script>
       </ScriptMethod>
