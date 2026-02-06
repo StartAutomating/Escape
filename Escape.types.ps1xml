@@ -538,6 +538,28 @@ if ($CellCount -gt 0) {
                     </Script>
       </ScriptMethod>
       <ScriptMethod>
+        <Name>disableReportingFocus</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Disable Reporting Focus Escape Sequence
+.DESCRIPTION
+    Escape Sequence for Disable Reporting Focus
+.LINK
+    https://en.wikipedia.org/wiki/ANSI_escape_code
+.NOTES
+    Disable reporting focus.
+    
+    Stops reporting whenever terminal emulator enters or exits focus as ESC [I and ESC [O, respectively.
+#&gt;
+param()
+
+$e = [char]27
+"$e[1004l"
+
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
         <Name>doubleUnderline</Name>
         <Script>
                         &lt;#
@@ -552,6 +574,26 @@ param()
 
 $e = [char]27
 "$e[21m"
+
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>enableReportingFocus</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Enable Reporting Focus Escape Sequence
+.DESCRIPTION
+    Escape Sequence for Enable Reporting Focus
+.LINK
+    https://en.wikipedia.org/wiki/ANSI_escape_code
+.NOTES
+    Enable reporting focus. Reports whenever terminal emulator enters or exits focus as ESC [I and ESC [O, respectively.
+#&gt;
+param()
+
+$e = [char]27
+"$e[1004h"
 
                     </Script>
       </ScriptMethod>
