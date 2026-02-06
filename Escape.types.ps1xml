@@ -538,6 +538,26 @@ if ($CellCount -gt 0) {
                     </Script>
       </ScriptMethod>
       <ScriptMethod>
+        <Name>disableAlternateScreenBuffer</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Disable Alternate Screen BufferEscape Sequence
+.DESCRIPTION
+    Escape Sequence for Disable Alternate Screen Buffer
+.LINK
+    https://en.wikipedia.org/wiki/ANSI_escape_code
+.NOTES
+    Disable Alternate Screen Buffer is supported in xterm.
+#&gt;
+param()
+
+$e = [char]27
+"$e[1049l"
+
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
         <Name>disableReportingFocus</Name>
         <Script>
                         &lt;#
@@ -574,6 +594,26 @@ param()
 
 $e = [char]27
 "$e[21m"
+
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>enableAlternateScreenBuffer</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Enable Alternate Screen BufferEscape Sequence
+.DESCRIPTION
+    Escape Sequence for Enable Alternate Screen Buffer
+.LINK
+    https://en.wikipedia.org/wiki/ANSI_escape_code
+.NOTES
+    Enable Alternate Screen Buffer is supported in xterm.
+#&gt;
+param()
+
+$e = [char]27
+"$e[1049h"
 
                     </Script>
       </ScriptMethod>
