@@ -739,6 +739,24 @@ $e = [char]27
                     </Script>
       </ScriptMethod>
       <ScriptMethod>
+        <Name>overline</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Overline Escape Sequence
+.DESCRIPTION
+    Escape Sequence for overline
+.LINK
+    https://en.wikipedia.org/wiki/ANSI_escape_code
+#&gt;
+param()
+
+$e = [char]27
+"$e[53m"
+
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
         <Name>proportionalSpacing</Name>
         <Script>
                         &lt;#
