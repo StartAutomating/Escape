@@ -1039,6 +1039,24 @@ $e = [char]27
                     </Script>
       </ScriptMethod>
       <ScriptMethod>
+        <Name>underlineDefault</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Underline Default Escape Sequence
+.DESCRIPTION
+    Escape Sequence for underline default coloring
+.LINK
+    https://en.wikipedia.org/wiki/ANSI_escape_code
+#&gt;
+param()
+
+$e = [char]27
+"$e[59m"
+
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
         <Name>underlineOff</Name>
         <Script>
                         &lt;#
