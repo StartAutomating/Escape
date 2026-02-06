@@ -398,6 +398,27 @@ if ($CellCount -ge 0) {
                     </Script>
       </ScriptMethod>
       <ScriptMethod>
+        <Name>cursorHide</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Hide Cursor Escape Sequence
+.DESCRIPTION
+    Escape Sequence to hide the cursor
+.LINK
+    https://en.wikipedia.org/wiki/ANSI_escape_code
+#&gt;
+param()
+
+$e = [char]27
+
+"$e[25l"
+
+
+
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
         <Name>cursorNextLine</Name>
         <Script>
                         &lt;#
@@ -459,6 +480,27 @@ if ($LineCount -lt 0) {
 } else {
     "$e[${LineCount}F"
 }
+
+
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>cursorShow</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Show Cursor Escape Sequence
+.DESCRIPTION
+    Escape Sequence to show the cursor
+.LINK
+    https://en.wikipedia.org/wiki/ANSI_escape_code
+#&gt;
+param()
+
+$e = [char]27
+
+"$e[25h"
+
 
 
                     </Script>
