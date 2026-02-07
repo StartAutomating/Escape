@@ -242,6 +242,26 @@ $e = [char]27
                     </Script>
       </ScriptMethod>
       <ScriptMethod>
+        <Name>clearScreen</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Clear Screen Escape Sequence
+.DESCRIPTION
+    Escape Sequence for clear screen
+.LINK
+    https://en.wikipedia.org/wiki/ANSI_escape_code
+.NOTES
+
+#&gt;
+param()
+
+$e = [char]27
+"$e[2J"
+
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
         <Name>conceal</Name>
         <Script>
                         &lt;#
