@@ -242,6 +242,26 @@ $e = [char]27
                     </Script>
       </ScriptMethod>
       <ScriptMethod>
+        <Name>clearLine</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Clear Line Escape Sequence
+.DESCRIPTION
+    Escape Sequence for clear line
+.LINK
+    https://en.wikipedia.org/wiki/ANSI_escape_code
+.NOTES
+
+#&gt;
+param()
+
+$e = [char]27
+"$e[2K"
+
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
         <Name>clearScreen</Name>
         <Script>
                         &lt;#
@@ -258,6 +278,46 @@ param()
 
 $e = [char]27
 "$e[2J"
+
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>clearToLineEnd</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Clear to End of Line Escape Sequence
+.DESCRIPTION
+    Escape Sequence for clear to end of line
+.LINK
+    https://en.wikipedia.org/wiki/ANSI_escape_code
+.NOTES
+
+#&gt;
+param()
+
+$e = [char]27
+"$e[1K"
+
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>clearToLineStart</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Clear to Start of Line Escape Sequence
+.DESCRIPTION
+    Escape Sequence for clear to start of line
+.LINK
+    https://en.wikipedia.org/wiki/ANSI_escape_code
+.NOTES
+
+#&gt;
+param()
+
+$e = [char]27
+"$e[0K"
 
                     </Script>
       </ScriptMethod>
