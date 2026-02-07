@@ -29,6 +29,52 @@ $e = [char]27
                     </Script>
       </ScriptMethod>
       <ScriptMethod>
+        <Name>auxOff</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Aux Off Escape Sequence
+.DESCRIPTION
+    Escape Sequence for auxillary output off
+.LINK
+    https://en.wikipedia.org/wiki/ANSI_escape_code
+.NOTES
+    This functionality is not supported in most terminals.
+
+    It was often used for printing over a serial port.
+#&gt;
+param()
+
+$e = [char]27
+"$e[4i"
+
+
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>auxOn</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Aux On Escape Sequence
+.DESCRIPTION
+    Escape Sequence for auxillary output on 
+.LINK
+    https://en.wikipedia.org/wiki/ANSI_escape_code
+.NOTES
+    This functionality is not supported in most terminals.
+
+    It was often used for printing over a serial port.
+#&gt;
+param()
+
+$e = [char]27
+"$e[5i"
+
+
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
         <Name>backgroundBlack</Name>
         <Script>
                         &lt;#
