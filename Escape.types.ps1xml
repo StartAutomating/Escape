@@ -262,6 +262,46 @@ $e = [char]27
                     </Script>
       </ScriptMethod>
       <ScriptMethod>
+        <Name>clearToScreenEnd</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Clear to End of Screen Escape Sequence
+.DESCRIPTION
+    Escape Sequence for clear to end of stream
+.LINK
+    https://en.wikipedia.org/wiki/ANSI_escape_code
+.NOTES
+
+#&gt;
+param()
+
+$e = [char]27
+"$e[1J"
+
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>clearToScreenStart</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Clear to Start of Screen Escape Sequence
+.DESCRIPTION
+    Escape Sequence for clear to start of the stream
+.LINK
+    https://en.wikipedia.org/wiki/ANSI_escape_code
+.NOTES
+
+#&gt;
+param()
+
+$e = [char]27
+"$e[0J"
+
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
         <Name>conceal</Name>
         <Script>
                         &lt;#
