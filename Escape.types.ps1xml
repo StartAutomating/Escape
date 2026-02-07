@@ -898,6 +898,150 @@ $e = [char]27
                     </Script>
       </ScriptMethod>
       <ScriptMethod>
+        <Name>foregroundBrightBlack</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Foreground Bright Black Escape Sequence
+.DESCRIPTION
+    Escape Sequence to set Foreground to Bright Black
+.NOTES
+    This color is xterm color number 8
+.LINK
+    https://en.wikipedia.org/wiki/ANSI_escape_code
+#&gt;
+$e = [char]27
+"$e[90m"
+
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>foregroundBrightBlue</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Foreground Bright Blue Escape Sequence
+.DESCRIPTION
+    Escape Sequence to set Foreground to Bright Blue
+.NOTES
+    This color is xterm color number 12
+.LINK
+    https://en.wikipedia.org/wiki/ANSI_escape_code
+#&gt;
+$e = [char]27
+"$e[94m"
+
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>foregroundBrightCyan</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Foreground Bright Cyan Escape Sequence
+.DESCRIPTION
+    Escape Sequence to set Foreground to Bright Cyan
+.NOTES
+    This color is xterm color number 14
+.LINK
+    https://en.wikipedia.org/wiki/ANSI_escape_code
+#&gt;
+$e = [char]27
+"$e[96m"
+
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>foregroundBrightGreen</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Foreground Bright Green Escape Sequence
+.DESCRIPTION
+    Escape Sequence to set Foreground to Bright Green
+.NOTES
+    This color is xterm color number 10
+.LINK
+    https://en.wikipedia.org/wiki/ANSI_escape_code
+#&gt;
+$e = [char]27
+"$e[92m"
+
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>foregroundBrightPurple</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Foreground Bright Purple Escape Sequence
+.DESCRIPTION
+    Escape Sequence to set Foreground to Bright Purple
+.NOTES
+    This color is xterm color number 13
+.LINK
+    https://en.wikipedia.org/wiki/ANSI_escape_code
+#&gt;
+$e = [char]27
+"$e[95m"
+
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>foregroundBrightRed</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Foreground Bright Red Escape Sequence
+.DESCRIPTION
+    Escape Sequence to set Foreground to Bright Red
+.NOTES
+    This color is xterm color number 9
+.LINK
+    https://en.wikipedia.org/wiki/ANSI_escape_code
+#&gt;
+$e = [char]27
+"$e[91m"
+
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>foregroundBrightWhite</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Foreground Bright White Escape Sequence
+.DESCRIPTION
+    Escape Sequence to set Foreground to Bright White
+.NOTES
+    This color is xterm color number 15
+.LINK
+    https://en.wikipedia.org/wiki/ANSI_escape_code
+#&gt;
+$e = [char]27
+"$e[97m"
+
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>foregroundBrightYellow</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Foreground Bright Yellow Escape Sequence
+.DESCRIPTION
+    Escape Sequence to set Foreground to Bright Yellow
+.NOTES
+    This color is xterm color number 11
+.LINK
+    https://en.wikipedia.org/wiki/ANSI_escape_code
+#&gt;
+$e = [char]27
+"$e[93m"
+
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
         <Name>foregroundCyan</Name>
         <Script>
                         &lt;#
