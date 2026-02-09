@@ -518,6 +518,26 @@ $e = [char]27
                     </Script>
       </ScriptMethod>
       <ScriptMethod>
+        <Name>clearScreenDeleteScrollback</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Clear Screen and Delete Scrollback Escape Sequence
+.DESCRIPTION
+    Escape Sequence for clear screen and delete scrollback
+.LINK
+    https://en.wikipedia.org/wiki/ANSI_escape_code
+.NOTES
+
+#&gt;
+param()
+
+$e = [char]27
+"$e[3J"
+
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
         <Name>clearToLineEnd</Name>
         <Script>
                         &lt;#
