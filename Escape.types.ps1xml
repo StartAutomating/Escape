@@ -1138,7 +1138,7 @@ $e = [char]27
     This will be quite hard for people to read, and should be used sparingly.
 #&gt;
 $e = [char]27
-"$e("
+"$e(B"
 
                     </Script>
       </ScriptMethod>
