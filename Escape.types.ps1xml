@@ -277,7 +277,13 @@ $Color = $(
 $e = [char]27
 if ($color -as [byte]) {
     "$e[48;5;${color}m"
-} elseif ($color -match '^#[a-f0-9]{6}$') {    
+} elseif (
+    $color -match '^#[a-f0-9]{6}$' -or
+    $color -match '^random$'
+) {
+    if ($matches[0] -eq 'random') {
+        $color = ("#{0:x6}" -f (Get-Random -Maximum 0xffffff))
+    }
     $r, $g, $b = 
         $Color.Substring(1,2),
         $Color.Substring(3,2),
@@ -1345,7 +1351,13 @@ $Color = $(
 $e = [char]27
 if ($color -as [byte]) {
     "$e[38;5;${color}m"
-} elseif ($color -match '^#[a-f0-9]{6}$') {    
+} elseif (
+    $color -match '^#[a-f0-9]{6}$' -or
+    $color -match '^random$'
+) {
+    if ($matches[0] -eq 'random') {
+        $color = ("#{0:x6}" -f (Get-Random -Maximum 0xffffff))
+    }  
     $r, $g, $b = 
         $Color.Substring(1,2),
         $Color.Substring(3,2),
@@ -1954,7 +1966,7 @@ $Number = $(
 ),
 
 # The color to set.
-[ValidatePattern('^\#[0-9a-f]{6}')]
+[ValidatePattern('^(?&gt;random|\#[0-9a-f]{6})$')]
 [string]
 $Color = $(
     $null, $color, $null = @($this.Input)
@@ -1963,6 +1975,9 @@ $Color = $(
 )
 
 if (-not $color) { return }
+if ($color -eq 'random') {
+    $color = '#{0:x6}' -f (Get-Random -Max 0xffffff)
+}
 
 $r, $g, $b = 
     $Color.Substring(1,2),
@@ -1983,10 +1998,14 @@ $e = [char]27
     Escape sequence to set the tab background color
 #&gt;
 param(
-[ValidatePattern('^\#[0-9a-f]{6}')]
+[ValidatePattern('^(?&gt;random|\#[0-9a-f]{6})$')]
 [string]
 $TabColor = "$($this.Input)"
 )
+
+if ($tabColor -eq 'random') {
+    $TabColor = "#{0:x6}" -f (Get-Random -Max 0xffffff)
+}
 
 if (-not $tabColor) { return }
 
@@ -2003,10 +2022,14 @@ $e = [char]27
         <Name>setTabForegroundColor</Name>
         <Script>
                         param(
-[ValidatePattern('^\#[0-9a-f]{6}')]
+[ValidatePattern('^(?&gt;random|\#[0-9a-f]{6})$')]
 [string]
 $TabColor = "$($this.Input)"
 )
+
+if ($tabColor -eq 'random') {
+    $TabColor = "#{0:x6}" -f (Get-Random -Max 0xffffff)
+}
 
 $r, $g, $b = 
     $TabColor.Substring(1,2),
@@ -2102,7 +2125,13 @@ $Color = $(
 $e = [char]27
 if ($color -as [byte]) {
     "$e[58;5;${color}m"
-} elseif ($color -match '^#[a-f0-9]{6}$') {    
+} elseif (
+    $color -match '^#[a-f0-9]{6}$' -or
+    $color -match '^random$'
+) {
+    if ($matches[0] -eq 'random') {
+        $color = ("#{0:x6}" -f (Get-Random -Maximum 0xffffff))
+    }    
     $r, $g, $b = 
         $Color.Substring(1,2),
         $Color.Substring(3,2),
