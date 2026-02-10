@@ -1076,6 +1076,44 @@ $e = [char]27
                     </Script>
       </ScriptMethod>
       <ScriptMethod>
+        <Name>enterLineDrawMode</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Enter Line Draw Mode Escape Sequence
+.DESCRIPTION
+    Escape Sequence to Enter Line Draw Mode
+.NOTES
+    If Line Drawing mode is supported by a terminal, 
+    it will switch some regular characters into line and box drawing characters.
+
+    This will be quite hard for people to read, and should be used sparingly.
+#&gt;
+$e = [char]27
+"$e(0"
+
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>exitLineDrawMode</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Exit Line Draw Mode Escape Sequence
+.DESCRIPTION
+    Escape Sequence to Exit Line Draw Mode
+.NOTES
+    If Line Drawing mode is supported by a terminal, 
+    it will switch some regular characters into line and box drawing characters.
+
+    This will be quite hard for people to read, and should be used sparingly.
+#&gt;
+$e = [char]27
+"$e("
+
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
         <Name>foregroundBlack</Name>
         <Script>
                         &lt;#
