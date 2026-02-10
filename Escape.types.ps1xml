@@ -938,6 +938,160 @@ $e = [char]27
                     </Script>
       </ScriptMethod>
       <ScriptMethod>
+        <Name>cursorShapeBar</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Cursor Shape Bar Escape Sequence
+.DESCRIPTION
+    Escape Sequence for Bar Cursor Shape
+.NOTES
+    This setting is sometimes ignored.
+    
+    Many terminals do not enable a blinking cursor.
+.LINK
+    https://learn.microsoft.com/en-us/windows/console/console-virtual-terminal-sequences
+#&gt;
+param()
+$e = [char]27
+"$e[6 q"
+
+
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>cursorShapeBlinkingBar</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Cursor Shape Blinking Bar Escape Sequence
+.DESCRIPTION
+    Escape Sequence for Blinking Bar Cursor Shape
+.NOTES
+    This setting is sometimes ignored.
+    
+    Many terminals do not enable a blinking cursor.
+.LINK
+    https://learn.microsoft.com/en-us/windows/console/console-virtual-terminal-sequences
+#&gt;
+param()
+$e = [char]27
+"$e[5 q"
+
+
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>cursorShapeBlinkingBlock</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Cursor Shape Blinking Block Escape Sequence
+.DESCRIPTION
+    Escape Sequence for Blinking Block Cursor Shape
+.NOTES
+    This setting is sometimes ignored.
+    
+    Many terminals do not enable a blinking cursor.
+.LINK
+    https://learn.microsoft.com/en-us/windows/console/console-virtual-terminal-sequences
+#&gt;
+param()
+$e = [char]27
+"$e[1 q"
+
+
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>cursorShapeBlinkingUnderline</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Cursor Shape Blinking Underline Escape Sequence
+.DESCRIPTION
+    Escape Sequence for Blinking Underline Cursor Shape
+.NOTES
+    This setting is sometimes ignored.
+    
+    Many terminals do not enable a blinking cursor.
+.LINK
+    https://learn.microsoft.com/en-us/windows/console/console-virtual-terminal-sequences
+#&gt;
+param()
+$e = [char]27
+"$e[3 q"
+
+
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>cursorShapeBlock</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Cursor Shape Block Escape Sequence
+.DESCRIPTION
+    Escape Sequence for Block Cursor Shape
+.NOTES
+    This setting is sometimes ignored.
+    
+    Many terminals do not enable a blinking cursor.
+.LINK
+    https://learn.microsoft.com/en-us/windows/console/console-virtual-terminal-sequences
+#&gt;
+param()
+$e = [char]27
+"$e[2 q"
+
+
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>cursorShapeDefault</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Cursor Shape Default Escape Sequence
+.DESCRIPTION
+    Escape Sequence for Default Cursor Shape
+.NOTES
+    This setting is sometimes ignored.
+    
+    Many terminals do not enable a blinking cursor.
+.LINK
+    https://learn.microsoft.com/en-us/windows/console/console-virtual-terminal-sequences
+#&gt;
+param()
+$e = [char]27
+"$e[0 q"
+
+
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>cursorShapeUnderline</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Cursor Shape Underline Escape Sequence
+.DESCRIPTION
+    Escape Sequence for Underline Cursor Shape
+.NOTES
+    This setting is sometimes ignored.
+    
+    Many terminals do not enable a blinking cursor.
+.LINK
+    https://learn.microsoft.com/en-us/windows/console/console-virtual-terminal-sequences
+#&gt;
+param()
+$e = [char]27
+"$e[4 q"
+
+
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
         <Name>cursorShow</Name>
         <Script>
                         &lt;#
