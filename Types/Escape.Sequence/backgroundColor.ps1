@@ -22,7 +22,13 @@ $Color = $(
 $e = [char]27
 if ($color -as [byte]) {
     "$e[48;5;${color}m"
-} elseif ($color -match '^#[a-f0-9]{6}$') {    
+} elseif (
+    $color -match '^#[a-f0-9]{6}$' -or
+    $color -match '^random$'
+) {
+    if ($matches[0] -eq 'random') {
+        $color = ("#{0:x6}" -f (Get-Random -Maximum 0xffffff))
+    }
     $r, $g, $b = 
         $Color.Substring(1,2),
         $Color.Substring(3,2),

@@ -25,7 +25,7 @@ $Number = $(
 ),
 
 # The color to set.
-[ValidatePattern('^\#[0-9a-f]{6}')]
+[ValidatePattern('^(?>random|\#[0-9a-f]{6})$')]
 [string]
 $Color = $(
     $null, $color, $null = @($this.Input)
@@ -34,6 +34,9 @@ $Color = $(
 )
 
 if (-not $color) { return }
+if ($color -eq 'random') {
+    $color = '#{0:x6}' -f (Get-Random -Max 0xffffff)
+}
 
 $r, $g, $b = 
     $Color.Substring(1,2),
