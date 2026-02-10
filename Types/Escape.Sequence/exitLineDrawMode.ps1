@@ -10,4 +10,4 @@
     This will be quite hard for people to read, and should be used sparingly.
 #>
 $e = [char]27
-"$e("
+"$e(B"
