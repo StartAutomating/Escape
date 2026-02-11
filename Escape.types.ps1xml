@@ -2412,7 +2412,15 @@ $e = [char]27
       <ScriptMethod>
         <Name>setTabForegroundColor</Name>
         <Script>
-                        param(
+                        &lt;#
+.SYNOPSIS
+    Tab Foreground Color Escape Sequence
+.DESCRIPTION
+    Escape Sequence for setting Tab Foreground Color
+.NOTES
+    This works in a few terminals.
+#&gt;
+param(
 [ValidatePattern('^(?&gt;random|\#[0-9a-f]{6})$')]
 [string]
 $TabColor = "$($this.Input)"
