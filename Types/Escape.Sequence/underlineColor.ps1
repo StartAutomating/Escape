@@ -9,10 +9,11 @@
 param(
 [PSObject]
 $Color = $(
-    if ($this.Input -as [byte]) {
+    if ($null -ne $this.Input -as [byte]) {
         $this.Input -as [byte]
-    } elseif ($this.Input -match '^#[a-f0-9]{6}$') {
-        $this.Input -as [byte]
+    } elseif ($this.Input -and 
+        $this.Input -match '^#[a-f0-9]{6}$') {
+        $this.Input
     } else {
         15
     }
@@ -20,7 +21,7 @@ $Color = $(
 )
 
 $e = [char]27
-if ($color -as [byte]) {
+if ($null -ne $color -as [byte]) {
     "$e[58;5;${color}m"
 } elseif (
     $color -match '^#[a-f0-9]{6}$' -or
