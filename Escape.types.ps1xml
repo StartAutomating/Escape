@@ -1796,6 +1796,24 @@ $e = [char]27
                     </Script>
       </ScriptMethod>
       <ScriptMethod>
+        <Name>ideogramStress</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Ideogram Stress Escape Sequence
+.DESCRIPTION
+    Escape Sequence for Ideogram Stress
+    
+    Ideogram escape sequences are supported in some loclized terminals.
+#&gt;
+param()
+$e = [char]27
+"$e[64m"
+
+
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
         <Name>italic</Name>
         <Script>
                         &lt;#
