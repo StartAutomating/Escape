@@ -1778,6 +1778,24 @@ $e = [char]27
                     </Script>
       </ScriptMethod>
       <ScriptMethod>
+        <Name>ideogramDoubleOverline</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Ideogram Double Overline Escape Sequence
+.DESCRIPTION
+    Escape Sequence for Ideogram Double Overline
+    
+    Ideogram escape sequences are supported in some loclized terminals.
+#&gt;
+param()
+$e = [char]27
+"$e[63m"
+
+
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
         <Name>ideogramReset</Name>
         <Script>
                         &lt;#
