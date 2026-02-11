@@ -944,6 +944,37 @@ if ($LineCount -lt 0) {
                     </Script>
       </ScriptMethod>
       <ScriptMethod>
+        <Name>cursorRelativeLine</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Cursor Relative Line Escape Sequence
+.DESCRIPTION
+    Escape Sequence to move the cursor to the relative line
+.LINK
+    https://en.wikipedia.org/wiki/ANSI_escape_code
+.NOTES
+    Not supported in all terminals
+#&gt;
+param(
+# The number of lines to move.
+[int]$LineCount = $(
+    if ("$($this.input)" -as [int]) {
+        "$($this.input)"
+    } else {
+        1
+    }
+)    
+)
+
+
+$e = [char]27
+"$e[$($LineCount)e"
+
+
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
         <Name>cursorRestore</Name>
         <Script>
                         &lt;#
