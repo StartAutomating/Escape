@@ -1,3 +1,11 @@
+<#
+.SYNOPSIS
+    Tab Foreground Color Escape Sequence
+.DESCRIPTION
+    Escape Sequence for setting Tab Foreground Color
+.NOTES
+    This works in a few terminals.
+#>
 param(
 [ValidatePattern('^(?>random|\#[0-9a-f]{6})$')]
 [string]
