@@ -1,8 +1,8 @@
 <#
 .SYNOPSIS
-    Ideogram Stress Escape Sequence
+    Ideogram Double Underline Escape Sequence
 .DESCRIPTION
-    Escape Sequence for Ideogram Stress
+    Escape Sequence for Ideogram Double Underline
     
     Ideogram escape sequences are supported in some loclized terminals.
 #>
