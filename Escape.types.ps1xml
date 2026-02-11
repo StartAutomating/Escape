@@ -1778,6 +1778,24 @@ $e = [char]27
                     </Script>
       </ScriptMethod>
       <ScriptMethod>
+        <Name>ideogramReset</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Ideogram Reset Escape Sequence
+.DESCRIPTION
+    Escape Sequence for Ideogram Reset
+    
+    Ideogram escape sequences are supported in some loclized terminals.
+#&gt;
+param()
+$e = [char]27
+"$e[65m"
+
+
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
         <Name>italic</Name>
         <Script>
                         &lt;#
