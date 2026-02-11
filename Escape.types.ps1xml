@@ -1,0 +1,2647 @@
+<!-- Generated with EZOut 2.0.6: Install-Module EZOut or https://github.com/StartAutomating/EZOut -->
+<Types>
+  <Type>
+    <Name>Escape.Sequence</Name>
+    <Members>
+      <ScriptMethod>
+        <Name>alternativeFont</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Alternate Font Escape Sequence
+.DESCRIPTION
+    Escape Sequence for alternate font selection
+.LINK
+    https://en.wikipedia.org/wiki/ANSI_escape_code
+.NOTES
+    This functionality is not supported in all terminals.
+#&gt;
+param(
+# The alternative font number.
+[ValidateRange(1,10)]
+[int]$FontNumber = "$($this.input)"
+)
+
+$e = [char]27
+"$e[$(10 + $fontNumber)m"
+
+
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>auxOff</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Aux Off Escape Sequence
+.DESCRIPTION
+    Escape Sequence for auxillary output off
+.LINK
+    https://en.wikipedia.org/wiki/ANSI_escape_code
+.NOTES
+    This functionality is not supported in most terminals.
+
+    It was often used for printing over a serial port.
+#&gt;
+param()
+
+$e = [char]27
+"$e[4i"
+
+
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>auxOn</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Aux On Escape Sequence
+.DESCRIPTION
+    Escape Sequence for auxillary output on 
+.LINK
+    https://en.wikipedia.org/wiki/ANSI_escape_code
+.NOTES
+    This functionality is not supported in most terminals.
+
+    It was often used for printing over a serial port.
+#&gt;
+param()
+
+$e = [char]27
+"$e[5i"
+
+
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>backgroundBlack</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Background Black Escape Sequence
+.DESCRIPTION
+    Escape Sequence to set Background to Black  
+.LINK
+    https://en.wikipedia.org/wiki/ANSI_escape_code
+#&gt;
+$e = [char]27
+"$e[40m"
+
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>backgroundBlue</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Background Blue Escape Sequence
+.DESCRIPTION
+    Escape Sequence to set Background to Blue  
+.LINK
+    https://en.wikipedia.org/wiki/ANSI_escape_code
+#&gt;
+$e = [char]27
+"$e[44m"
+
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>backgroundBrightBlack</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Background Bright Black Escape Sequence
+.DESCRIPTION
+    Escape Sequence to set Background to Bright Black
+.NOTES
+    This color is xterm color number 8
+.LINK
+    https://en.wikipedia.org/wiki/ANSI_escape_code
+#&gt;
+$e = [char]27
+"$e[100m"
+
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>backgroundBrightBlue</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Background Bright Blue Escape Sequence
+.DESCRIPTION
+    Escape Sequence to set Background to Bright Blue
+.NOTES
+    This color is xterm color number 12
+.LINK
+    https://en.wikipedia.org/wiki/ANSI_escape_code
+#&gt;
+$e = [char]27
+"$e[104m"
+
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>backgroundBrightCyan</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Background Bright Cyan Escape Sequence
+.DESCRIPTION
+    Escape Sequence to set Background to Bright Cyan
+.NOTES
+    This color is xterm color number 14
+.LINK
+    https://en.wikipedia.org/wiki/ANSI_escape_code
+#&gt;
+$e = [char]27
+"$e[106m"
+
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>backgroundBrightGreen</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Background Bright Green Escape Sequence
+.DESCRIPTION
+    Escape Sequence to set Background to Bright Green
+.NOTES
+    This color is xterm color number 10
+.LINK
+    https://en.wikipedia.org/wiki/ANSI_escape_code
+#&gt;
+$e = [char]27
+"$e[102m"
+
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>backgroundBrightPurple</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Background Bright Purple Escape Sequence
+.DESCRIPTION
+    Escape Sequence to set Background to Bright Purple
+.NOTES
+    This color is xterm color number 13
+.LINK
+    https://en.wikipedia.org/wiki/ANSI_escape_code
+#&gt;
+$e = [char]27
+"$e[105m"
+
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>backgroundBrightRed</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Background Bright Red Escape Sequence
+.DESCRIPTION
+    Escape Sequence to set Background to Bright Red
+.NOTES
+    This color is xterm color number 9
+.LINK
+    https://en.wikipedia.org/wiki/ANSI_escape_code
+#&gt;
+$e = [char]27
+"$e[101m"
+
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>backgroundBrightWhite</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Background Bright White Escape Sequence
+.DESCRIPTION
+    Escape Sequence to set Background to Bright White
+.NOTES
+    This color is xterm color number 15
+.LINK
+    https://en.wikipedia.org/wiki/ANSI_escape_code
+#&gt;
+$e = [char]27
+"$e[107m"
+
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>backgroundBrightYellow</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Background Bright Yellow Escape Sequence
+.DESCRIPTION
+    Escape Sequence to set Background to Bright Yellow
+.NOTES
+    This color is xterm color number 11
+.LINK
+    https://en.wikipedia.org/wiki/ANSI_escape_code
+#&gt;
+$e = [char]27
+"$e[103m"
+
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>backgroundColor</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Background Color Escape Sequence
+.DESCRIPTION
+    Escape Sequence to set Background Color  
+.LINK
+    https://en.wikipedia.org/wiki/ANSI_escape_code
+#&gt;
+param(
+[PSObject]
+$Color = $(
+    if ($null -ne $this.Input -as [byte]) {
+        $this.Input -as [byte]
+    } elseif ($this.Input -and 
+        $this.Input -match '^#[a-f0-9]{6}$') {
+        $this.Input
+    } else {
+        15
+    }
+)
+)
+
+$e = [char]27
+if ($null -ne $color -as [byte]) {
+    "$e[48;5;${color}m"
+} elseif (
+    $color -match '^#[a-f0-9]{6}$' -or
+    $color -match '^random$'
+) {
+    if ($matches[0] -eq 'random') {
+        $color = ("#{0:x6}" -f (Get-Random -Maximum 0xffffff))
+    }
+    $r, $g, $b = 
+        $Color.Substring(1,2),
+        $Color.Substring(3,2),
+        $Color.Substring(5,2)
+
+    "$e[48;2;$(
+        @(
+            "0x$r" -as [byte]
+            "0x$g" -as [byte]
+            "0x$b" -as [byte]
+        ) -join ';'            
+    )m"
+}
+
+
+
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>backgroundCyan</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Background Cyan Escape Sequence
+.DESCRIPTION
+    Escape Sequence to set Background to Cyan  
+.LINK
+    https://en.wikipedia.org/wiki/ANSI_escape_code
+#&gt;
+$e = [char]27
+"$e[46m"
+
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>backgroundDefault</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Background default Escape Sequence
+.DESCRIPTION
+    Escape Sequence to set background to the default.  
+.LINK
+    https://en.wikipedia.org/wiki/ANSI_escape_code
+#&gt;
+$e = [char]27
+"$e[49m"
+
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>backgroundGreen</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Background Green Escape Sequence
+.DESCRIPTION
+    Escape Sequence to set Background to Green  
+.LINK
+    https://en.wikipedia.org/wiki/ANSI_escape_code
+#&gt;
+$e = [char]27
+"$e[42m"
+
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>backgroundPurple</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Background Purple Escape Sequence
+.DESCRIPTION
+    Escape Sequence to set Background to Purple  
+.LINK
+    https://en.wikipedia.org/wiki/ANSI_escape_code
+#&gt;
+$e = [char]27
+"$e[45m"
+
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>backgroundRed</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Background Red Escape Sequence
+.DESCRIPTION
+    Escape Sequence to set Background to Red  
+.LINK
+    https://en.wikipedia.org/wiki/ANSI_escape_code
+#&gt;
+$e = [char]27
+"$e[41m"
+
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>backgroundWhite</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Background White Escape Sequence
+.DESCRIPTION
+    Escape Sequence to set Background to White  
+.LINK
+    https://en.wikipedia.org/wiki/ANSI_escape_code
+#&gt;
+$e = [char]27
+"$e[47m"
+
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>backgroundYellow</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Background Yellow Escape Sequence
+.DESCRIPTION
+    Escape Sequence to set Background to Yellow  
+.LINK
+    https://en.wikipedia.org/wiki/ANSI_escape_code
+#&gt;
+$e = [char]27
+"$e[43m"
+
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>blink</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Blink Escape Sequence
+.DESCRIPTION
+    Escape Sequence for blink
+.LINK
+    https://en.wikipedia.org/wiki/ANSI_escape_code
+.NOTES
+    Will not work in many terminals.  May be distracting when it does.
+#&gt;
+param(
+[switch]
+$Rapid
+)
+
+$e = [char]27
+if ($rapid) {
+    "$e[6m"
+} else {
+    "$e[5m"
+}
+
+
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>blinkOff</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Blink Escape Sequence
+.DESCRIPTION
+    Escape Sequence for blink
+.LINK
+    https://en.wikipedia.org/wiki/ANSI_escape_code
+#&gt;
+param(
+[switch]
+$Rapid
+)
+
+$e = [char]27
+"$e[25m"
+
+
+
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>bold</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Bold Escape Sequence
+.DESCRIPTION
+    Escape Sequence for Bold (high intensity) text
+.LINK
+    https://en.wikipedia.org/wiki/ANSI_escape_code
+#&gt;
+param()
+
+$e = [char]27
+"$e[1m"
+
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>clearLine</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Clear Line Escape Sequence
+.DESCRIPTION
+    Escape Sequence for clear line
+.LINK
+    https://en.wikipedia.org/wiki/ANSI_escape_code
+.NOTES
+
+#&gt;
+param()
+
+$e = [char]27
+"$e[2K"
+
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>clearScreen</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Clear Screen Escape Sequence
+.DESCRIPTION
+    Escape Sequence for clear screen
+.LINK
+    https://en.wikipedia.org/wiki/ANSI_escape_code
+.NOTES
+
+#&gt;
+param()
+
+$e = [char]27
+"$e[2J"
+
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>clearScreenDeleteScrollback</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Clear Screen and Delete Scrollback Escape Sequence
+.DESCRIPTION
+    Escape Sequence for clear screen and delete scrollback
+.LINK
+    https://en.wikipedia.org/wiki/ANSI_escape_code
+.NOTES
+
+#&gt;
+param()
+
+$e = [char]27
+"$e[3J"
+
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>clearToLineEnd</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Clear to End of Line Escape Sequence
+.DESCRIPTION
+    Escape Sequence for clear to end of line
+.LINK
+    https://en.wikipedia.org/wiki/ANSI_escape_code
+.NOTES
+
+#&gt;
+param()
+
+$e = [char]27
+"$e[1K"
+
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>clearToLineStart</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Clear to Start of Line Escape Sequence
+.DESCRIPTION
+    Escape Sequence for clear to start of line
+.LINK
+    https://en.wikipedia.org/wiki/ANSI_escape_code
+.NOTES
+
+#&gt;
+param()
+
+$e = [char]27
+"$e[0K"
+
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>clearToScreenEnd</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Clear to End of Screen Escape Sequence
+.DESCRIPTION
+    Escape Sequence for clear to end of stream
+.LINK
+    https://en.wikipedia.org/wiki/ANSI_escape_code
+.NOTES
+
+#&gt;
+param()
+
+$e = [char]27
+"$e[1J"
+
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>clearToScreenStart</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Clear to Start of Screen Escape Sequence
+.DESCRIPTION
+    Escape Sequence for clear to start of the stream
+.LINK
+    https://en.wikipedia.org/wiki/ANSI_escape_code
+.NOTES
+
+#&gt;
+param()
+
+$e = [char]27
+"$e[0J"
+
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>conceal</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Conceal Escape Sequence
+.DESCRIPTION
+    Escape Sequence for concealed content
+.LINK
+    https://en.wikipedia.org/wiki/ANSI_escape_code
+#&gt;
+param(
+)
+
+$e = [char]27
+"$e[8m"
+
+
+
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>crossout</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Crossout Escape Sequence
+.DESCRIPTION
+    Escape Sequence for crossed out text
+.LINK
+    https://en.wikipedia.org/wiki/ANSI_escape_code
+#&gt;
+param()
+
+$e = [char]27
+"$e[9m"
+
+
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>crossoutOff</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Crossout Off Escape Sequence
+.DESCRIPTION
+    Escape Sequence for stopping cross out text
+.LINK
+    https://en.wikipedia.org/wiki/ANSI_escape_code
+#&gt;
+param()
+
+$e = [char]27
+"$e[29m"
+
+
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>cursorAbsoluteLine</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Cursor Absolute Line Escape Sequence
+.DESCRIPTION
+    Escape Sequence to move the cursor to the absolute line
+.LINK
+    https://en.wikipedia.org/wiki/ANSI_escape_code
+#&gt;
+param(
+# The line to move to.
+[int]$LineCount = $(
+    if ("$($this.input)" -as [int]) {
+        "$($this.input)"
+    } else {
+        1
+    }
+)    
+)
+
+
+$e = [char]27
+"$e[$($LineCount)d"
+
+
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>cursorBackward</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Cursor Backward Escape Sequence
+.DESCRIPTION
+    Escape Sequence to move the cursor backward
+.LINK
+    https://en.wikipedia.org/wiki/ANSI_escape_code
+#&gt;
+param(
+# The number of cells to move
+[int]$CellCount = $(
+    if ("$($this.input)" -as [int]) {
+        "$($this.input)"
+    } else {
+        1
+    }
+)    
+)
+
+$e = [char]27
+if ($CellCount -lt 0) {
+    "$e[${CellCount}C"
+} else {
+    "$e[${CellCount}D"
+}
+
+
+
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>cursorBlinkOff</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Cursor Blink Off Escape Sequence
+.DESCRIPTION
+    Escape Sequence for Cursor Blink Off
+.NOTES
+    This setting is often ignored.
+    
+    Many terminals do not enable a blinking cursor.
+
+    Many others use to various cursor shapes to enable blinking.
+.LINK
+    https://learn.microsoft.com/en-us/windows/console/console-virtual-terminal-sequences
+#&gt;
+param()
+$e = [char]27
+"$e[?12h"
+
+
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>cursorBlinkOn</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Cursor Blink On Escape Sequence
+.DESCRIPTION
+    Escape Sequence for Cursor Blink On    
+.NOTES
+    This setting is often ignored.
+    
+    Many terminals do not enable a blinking cursor.
+
+    Many others use to various cursor shapes to enable blinking.    
+.LINK
+    https://learn.microsoft.com/en-us/windows/console/console-virtual-terminal-sequences
+#&gt;
+param()
+$e = [char]27
+"$e[?12h"
+
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>cursorDown</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Cursor Down Escape Sequence
+.DESCRIPTION
+    Escape Sequence to move the cursor down
+.LINK
+    https://en.wikipedia.org/wiki/ANSI_escape_code
+#&gt;
+param(
+# The number of cells to move.
+[int]$CellCount = $(
+    if ("$($this.input)" -as [int]) {
+        "$($this.input)"
+    } else {
+        1
+    }
+)    
+)
+
+$e = [char]27
+if ($CellCount -lt 0) {
+    "$e[${CellCount}A"
+} else {
+    "$e[${CellCount}B"
+}
+
+
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>cursorForward</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Cursor Forward Escape Sequence
+.DESCRIPTION
+    Escape Sequence to move the cursor forward
+.LINK
+    https://en.wikipedia.org/wiki/ANSI_escape_code
+#&gt;
+param(
+# The number of cells to move.
+[int]$CellCount = $(
+    if ("$($this.input)" -as [int]) {
+        "$($this.input)"
+    } else {
+        1
+    }
+)    
+)
+
+
+$e = [char]27
+if ($CellCount -ge 0) {
+    "$e[${CellCount}C"
+} else {
+    "$e[${CellCount}D"
+}
+
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>cursorHide</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Hide Cursor Escape Sequence
+.DESCRIPTION
+    Escape Sequence to hide the cursor
+.LINK
+    https://en.wikipedia.org/wiki/ANSI_escape_code
+#&gt;
+param()
+
+$e = [char]27
+
+"$e[25l"
+
+
+
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>cursorNextLine</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Cursor Next Line Escape Sequence
+.DESCRIPTION
+    Escape Sequence to move the cursor to the next line
+.LINK
+    https://en.wikipedia.org/wiki/ANSI_escape_code
+#&gt;
+param(
+# The number of cells to move.
+[int]$LineCount = $(
+    if ("$($this.input)" -as [int]) {
+        "$($this.input)"
+    } else {
+        1
+    }
+)    
+)
+
+
+$e = [char]27
+if ($LineCount -gt 0) {
+    "$e[${LineCount}E"
+} else {
+    "$e[${LineCount}F"
+}
+
+
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>cursorPreviousLine</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Cursor Next Line Escape Sequence
+.DESCRIPTION
+    Escape Sequence to move the cursor to the next line
+.LINK
+    https://en.wikipedia.org/wiki/ANSI_escape_code
+#&gt;
+param(
+# The number of cells to move.
+[int]$LineCount = $(
+    if ("$($this.input)" -as [int]) {
+        "$($this.input)"
+    } else {
+        1
+    }
+)    
+)
+
+
+$e = [char]27
+if ($LineCount -lt 0) {
+    "$e[${LineCount}E"
+} else {
+    "$e[${LineCount}F"
+}
+
+
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>cursorRelativeLine</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Cursor Relative Line Escape Sequence
+.DESCRIPTION
+    Escape Sequence to move the cursor to the relative line
+.LINK
+    https://en.wikipedia.org/wiki/ANSI_escape_code
+.NOTES
+    Not supported in all terminals
+#&gt;
+param(
+# The number of lines to move.
+[int]$LineCount = $(
+    if ("$($this.input)" -as [int]) {
+        "$($this.input)"
+    } else {
+        1
+    }
+)    
+)
+
+
+$e = [char]27
+"$e[$($LineCount)e"
+
+
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>cursorRestore</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Restore Cursor Escape Sequence
+.DESCRIPTION
+    Escape Sequence to restore the cursor position
+.LINK
+    https://en.wikipedia.org/wiki/ANSI_escape_code
+#&gt;
+param()
+
+$e = [char]27
+
+"$e[u"
+
+
+
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>cursorSave</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Save Cursor Escape Sequence
+.DESCRIPTION
+    Escape Sequence to save the cursor position
+.LINK
+    https://en.wikipedia.org/wiki/ANSI_escape_code
+#&gt;
+param()
+
+$e = [char]27
+
+"$e[s"
+
+
+
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>cursorShapeBar</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Cursor Shape Bar Escape Sequence
+.DESCRIPTION
+    Escape Sequence for Bar Cursor Shape
+.NOTES
+    This setting is sometimes ignored.
+    
+    Many terminals do not enable a blinking cursor.
+.LINK
+    https://learn.microsoft.com/en-us/windows/console/console-virtual-terminal-sequences
+#&gt;
+param()
+$e = [char]27
+"$e[6 q"
+
+
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>cursorShapeBlinkingBar</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Cursor Shape Blinking Bar Escape Sequence
+.DESCRIPTION
+    Escape Sequence for Blinking Bar Cursor Shape
+.NOTES
+    This setting is sometimes ignored.
+    
+    Many terminals do not enable a blinking cursor.
+.LINK
+    https://learn.microsoft.com/en-us/windows/console/console-virtual-terminal-sequences
+#&gt;
+param()
+$e = [char]27
+"$e[5 q"
+
+
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>cursorShapeBlinkingBlock</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Cursor Shape Blinking Block Escape Sequence
+.DESCRIPTION
+    Escape Sequence for Blinking Block Cursor Shape
+.NOTES
+    This setting is sometimes ignored.
+    
+    Many terminals do not enable a blinking cursor.
+.LINK
+    https://learn.microsoft.com/en-us/windows/console/console-virtual-terminal-sequences
+#&gt;
+param()
+$e = [char]27
+"$e[1 q"
+
+
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>cursorShapeBlinkingUnderline</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Cursor Shape Blinking Underline Escape Sequence
+.DESCRIPTION
+    Escape Sequence for Blinking Underline Cursor Shape
+.NOTES
+    This setting is sometimes ignored.
+    
+    Many terminals do not enable a blinking cursor.
+.LINK
+    https://learn.microsoft.com/en-us/windows/console/console-virtual-terminal-sequences
+#&gt;
+param()
+$e = [char]27
+"$e[3 q"
+
+
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>cursorShapeBlock</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Cursor Shape Block Escape Sequence
+.DESCRIPTION
+    Escape Sequence for Block Cursor Shape
+.NOTES
+    This setting is sometimes ignored.
+    
+    Many terminals do not enable a blinking cursor.
+.LINK
+    https://learn.microsoft.com/en-us/windows/console/console-virtual-terminal-sequences
+#&gt;
+param()
+$e = [char]27
+"$e[2 q"
+
+
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>cursorShapeDefault</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Cursor Shape Default Escape Sequence
+.DESCRIPTION
+    Escape Sequence for Default Cursor Shape
+.NOTES
+    This setting is sometimes ignored.
+    
+    Many terminals do not enable a blinking cursor.
+.LINK
+    https://learn.microsoft.com/en-us/windows/console/console-virtual-terminal-sequences
+#&gt;
+param()
+$e = [char]27
+"$e[0 q"
+
+
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>cursorShapeUnderline</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Cursor Shape Underline Escape Sequence
+.DESCRIPTION
+    Escape Sequence for Underline Cursor Shape
+.NOTES
+    This setting is sometimes ignored.
+    
+    Many terminals do not enable a blinking cursor.
+.LINK
+    https://learn.microsoft.com/en-us/windows/console/console-virtual-terminal-sequences
+#&gt;
+param()
+$e = [char]27
+"$e[4 q"
+
+
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>cursorShow</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Show Cursor Escape Sequence
+.DESCRIPTION
+    Escape Sequence to show the cursor
+.LINK
+    https://en.wikipedia.org/wiki/ANSI_escape_code
+#&gt;
+param()
+
+$e = [char]27
+
+"$e[25h"
+
+
+
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>cursorUp</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Cursor Up Escape Sequence
+.DESCRIPTION
+    Escape Sequence to move the cursor up
+.LINK
+    https://en.wikipedia.org/wiki/ANSI_escape_code
+#&gt;
+param(
+# The number of cells to move.
+[int]$CellCount = $(
+    if ("$($this.input)" -as [int]) {
+        "$($this.input)"
+    } else {
+        1
+    }
+)    
+)
+
+$e = [char]27
+if ($CellCount -gt 0) {
+    "$e[${CellCount}A"
+} else {
+    "$e[${CellCount}B"
+}
+
+
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>disableAlternateScreenBuffer</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Disable Alternate Screen BufferEscape Sequence
+.DESCRIPTION
+    Escape Sequence for Disable Alternate Screen Buffer
+.LINK
+    https://en.wikipedia.org/wiki/ANSI_escape_code
+.NOTES
+    Disable Alternate Screen Buffer is supported in xterm.
+#&gt;
+param()
+
+$e = [char]27
+"$e[1049l"
+
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>disableReportingFocus</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Disable Reporting Focus Escape Sequence
+.DESCRIPTION
+    Escape Sequence for Disable Reporting Focus
+.LINK
+    https://en.wikipedia.org/wiki/ANSI_escape_code
+.NOTES
+    Disable reporting focus.
+    
+    Stops reporting whenever terminal emulator enters or exits focus as ESC [I and ESC [O, respectively.
+#&gt;
+param()
+
+$e = [char]27
+"$e[1004l"
+
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>doubleUnderline</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Double Underline Escape Sequence
+.DESCRIPTION
+    Escape Sequence for double underline
+.LINK
+    https://en.wikipedia.org/wiki/ANSI_escape_code
+#&gt;
+param()
+
+$e = [char]27
+"$e[21m"
+
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>enableAlternateScreenBuffer</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Enable Alternate Screen BufferEscape Sequence
+.DESCRIPTION
+    Escape Sequence for Enable Alternate Screen Buffer
+.LINK
+    https://en.wikipedia.org/wiki/ANSI_escape_code
+.NOTES
+    Enable Alternate Screen Buffer is supported in xterm.
+#&gt;
+param()
+
+$e = [char]27
+"$e[1049h"
+
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>enableReportingFocus</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Enable Reporting Focus Escape Sequence
+.DESCRIPTION
+    Escape Sequence for Enable Reporting Focus
+.LINK
+    https://en.wikipedia.org/wiki/ANSI_escape_code
+.NOTES
+    Enable reporting focus. Reports whenever terminal emulator enters or exits focus as ESC [I and ESC [O, respectively.
+#&gt;
+param()
+
+$e = [char]27
+"$e[1004h"
+
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>encircled</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Encircled Escape Sequence
+.DESCRIPTION
+    Escape Sequence for encircled
+.LINK
+    https://en.wikipedia.org/wiki/ANSI_escape_code
+.NOTES
+    Not supported by most terminals.  Used for Emoji variation selection in mintty.
+#&gt;
+param()
+
+$e = [char]27
+"$e[52m"
+
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>enterLineDrawMode</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Enter Line Draw Mode Escape Sequence
+.DESCRIPTION
+    Escape Sequence to Enter Line Draw Mode
+.NOTES
+    If Line Drawing mode is supported by a terminal, 
+    it will switch some regular characters into line and box drawing characters.
+
+    This will be quite hard for people to read, and should be used sparingly.
+#&gt;
+$e = [char]27
+"$e(0"
+
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>exitLineDrawMode</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Exit Line Draw Mode Escape Sequence
+.DESCRIPTION
+    Escape Sequence to Exit Line Draw Mode
+.NOTES
+    If Line Drawing mode is supported by a terminal, 
+    it will switch some regular characters into line and box drawing characters.
+
+    This will be quite hard for people to read, and should be used sparingly.
+#&gt;
+$e = [char]27
+"$e(B"
+
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>foregroundBlack</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Foreground Black Escape Sequence
+.DESCRIPTION
+    Escape Sequence to set Foreground to Black  
+.LINK
+    https://en.wikipedia.org/wiki/ANSI_escape_code
+#&gt;
+$e = [char]27
+"$e[30m"
+
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>foregroundBlue</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Foreground Blue Escape Sequence
+.DESCRIPTION
+    Escape Sequence to set Foreground to Blue  
+.LINK
+    https://en.wikipedia.org/wiki/ANSI_escape_code
+#&gt;
+$e = [char]27
+"$e[34m"
+
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>foregroundBrightBlack</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Foreground Bright Black Escape Sequence
+.DESCRIPTION
+    Escape Sequence to set Foreground to Bright Black
+.NOTES
+    This color is xterm color number 8
+.LINK
+    https://en.wikipedia.org/wiki/ANSI_escape_code
+#&gt;
+$e = [char]27
+"$e[90m"
+
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>foregroundBrightBlue</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Foreground Bright Blue Escape Sequence
+.DESCRIPTION
+    Escape Sequence to set Foreground to Bright Blue
+.NOTES
+    This color is xterm color number 12
+.LINK
+    https://en.wikipedia.org/wiki/ANSI_escape_code
+#&gt;
+$e = [char]27
+"$e[94m"
+
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>foregroundBrightCyan</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Foreground Bright Cyan Escape Sequence
+.DESCRIPTION
+    Escape Sequence to set Foreground to Bright Cyan
+.NOTES
+    This color is xterm color number 14
+.LINK
+    https://en.wikipedia.org/wiki/ANSI_escape_code
+#&gt;
+$e = [char]27
+"$e[96m"
+
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>foregroundBrightGreen</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Foreground Bright Green Escape Sequence
+.DESCRIPTION
+    Escape Sequence to set Foreground to Bright Green
+.NOTES
+    This color is xterm color number 10
+.LINK
+    https://en.wikipedia.org/wiki/ANSI_escape_code
+#&gt;
+$e = [char]27
+"$e[92m"
+
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>foregroundBrightPurple</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Foreground Bright Purple Escape Sequence
+.DESCRIPTION
+    Escape Sequence to set Foreground to Bright Purple
+.NOTES
+    This color is xterm color number 13
+.LINK
+    https://en.wikipedia.org/wiki/ANSI_escape_code
+#&gt;
+$e = [char]27
+"$e[95m"
+
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>foregroundBrightRed</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Foreground Bright Red Escape Sequence
+.DESCRIPTION
+    Escape Sequence to set Foreground to Bright Red
+.NOTES
+    This color is xterm color number 9
+.LINK
+    https://en.wikipedia.org/wiki/ANSI_escape_code
+#&gt;
+$e = [char]27
+"$e[91m"
+
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>foregroundBrightWhite</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Foreground Bright White Escape Sequence
+.DESCRIPTION
+    Escape Sequence to set Foreground to Bright White
+.NOTES
+    This color is xterm color number 15
+.LINK
+    https://en.wikipedia.org/wiki/ANSI_escape_code
+#&gt;
+$e = [char]27
+"$e[97m"
+
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>foregroundBrightYellow</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Foreground Bright Yellow Escape Sequence
+.DESCRIPTION
+    Escape Sequence to set Foreground to Bright Yellow
+.NOTES
+    This color is xterm color number 11
+.LINK
+    https://en.wikipedia.org/wiki/ANSI_escape_code
+#&gt;
+$e = [char]27
+"$e[93m"
+
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>foregroundColor</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Foreground Color Escape Sequence
+.DESCRIPTION
+    Escape Sequence to set Foreground Color  
+.LINK
+    https://en.wikipedia.org/wiki/ANSI_escape_code
+#&gt;
+param(
+[PSObject]
+$Color = $(
+    if ($null -ne $this.Input -as [byte]) {
+        $this.Input -as [byte]
+    } elseif ($this.Input -and 
+        $this.Input -match '^#[a-f0-9]{6}$') {
+        $this.Input
+    } else {
+        15
+    }
+)
+)
+
+$e = [char]27
+if ($null -ne $color -as [byte]) {
+    "$e[38;5;${color}m"
+} elseif (
+    $color -match '^#[a-f0-9]{6}$' -or
+    $color -match '^random$'
+) {
+    if ($matches[0] -eq 'random') {
+        $color = ("#{0:x6}" -f (Get-Random -Maximum 0xffffff))
+    }  
+    $r, $g, $b = 
+        $Color.Substring(1,2),
+        $Color.Substring(3,2),
+        $Color.Substring(5,2)
+
+    "$e[38;2;$(
+        @(
+            "0x$r" -as [byte]
+            "0x$g" -as [byte]
+            "0x$b" -as [byte]
+        ) -join ';'            
+    )m"
+}
+
+
+
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>foregroundCyan</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Foreground Cyan Escape Sequence
+.DESCRIPTION
+    Escape Sequence to set Foreground to Cyan  
+.LINK
+    https://en.wikipedia.org/wiki/ANSI_escape_code
+#&gt;
+$e = [char]27
+"$e[36m"
+
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>foregroundDefault</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Foreground default Escape Sequence
+.DESCRIPTION
+    Escape Sequence to set foreground to the default.  
+.LINK
+    https://en.wikipedia.org/wiki/ANSI_escape_code
+#&gt;
+$e = [char]27
+"$e[39m"
+
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>foregroundGreen</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Foreground Green Escape Sequence
+.DESCRIPTION
+    Escape Sequence to set Foreground to Green  
+.LINK
+    https://en.wikipedia.org/wiki/ANSI_escape_code
+#&gt;
+$e = [char]27
+"$e[32m"
+
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>foregroundPurple</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Foreground Purple Escape Sequence
+.DESCRIPTION
+    Escape Sequence to set Foreground to Purple  
+.LINK
+    https://en.wikipedia.org/wiki/ANSI_escape_code
+#&gt;
+$e = [char]27
+"$e[35m"
+
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>foregroundRed</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Foreground Red Escape Sequence
+.DESCRIPTION
+    Escape Sequence to set Foreground to Red  
+.LINK
+    https://en.wikipedia.org/wiki/ANSI_escape_code
+#&gt;
+$e = [char]27
+"$e[31m"
+
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>foregroundWhite</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Foreground White Escape Sequence
+.DESCRIPTION
+    Escape Sequence to set Foreground to White  
+.LINK
+    https://en.wikipedia.org/wiki/ANSI_escape_code
+#&gt;
+$e = [char]27
+"$e[37m"
+
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>foregroundYellow</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Foreground Yellow Escape Sequence
+.DESCRIPTION
+    Escape Sequence to set Foreground to Yellow  
+.LINK
+    https://en.wikipedia.org/wiki/ANSI_escape_code
+#&gt;
+$e = [char]27
+"$e[33m"
+
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>framed</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Framed Escape Sequence
+.DESCRIPTION
+    Escape Sequence for framed
+.LINK
+    https://en.wikipedia.org/wiki/ANSI_escape_code
+.NOTES
+    Not supported by most terminals.  Used for Emoji variation selection in mintty
+#&gt;
+param()
+
+$e = [char]27
+"$e[51m"
+
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>html</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+
+.DESCRIPTION
+
+.EXAMPLE
+    ./html.escape.ps1 "&lt;escape this tag&gt;"
+#&gt;
+param(
+[string]
+$Content = "$($this.Input)"
+)
+
+[Web.HttpUtility]::HtmlEncode($Content)
+
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>htmlAttribute</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Escapes html attributes
+.DESCRIPTION
+    Escapes content for encoding into an html attribute.
+.EXAMPLE
+    ./html.escape.ps1 "&lt;escape this tag&gt;"
+#&gt;
+param(
+[string]
+$Content = "$($this.Content)"
+)
+
+[Web.HttpUtility]::HtmlAttributeEncode($Content)
+
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>hyperlink</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Hyperlink Escape Sequence
+.DESCRIPTION
+    Escape Sequence for a Hyperlink
+#&gt;
+param(
+# The link uri 
+[alias('Url')]
+[uri]
+$Uri,
+
+# The link text
+[string]
+$Text
+)
+
+
+if (-not $uri) { return }
+if (-not $text) { $text = $uri }
+
+$e = [char]27
+"$e]8;;${uri}$e\${text}$e]8;;$e\"
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>ideogramDoubleOverline</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Ideogram Double Overline Escape Sequence
+.DESCRIPTION
+    Escape Sequence for Ideogram Double Overline
+    
+    Ideogram escape sequences are supported in some loclized terminals.
+#&gt;
+param()
+$e = [char]27
+"$e[63m"
+
+
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>ideogramDoubleUnderline</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Ideogram Double Underline Escape Sequence
+.DESCRIPTION
+    Escape Sequence for Ideogram Double Underline
+    
+    Ideogram escape sequences are supported in some loclized terminals.
+#&gt;
+param()
+$e = [char]27
+"$e[61m"
+
+
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>ideogramOverline</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Ideogram Overline Escape Sequence
+.DESCRIPTION
+    Escape Sequence for Ideogram Overline
+    
+    Ideogram escape sequences are supported in some loclized terminals.
+#&gt;
+param()
+$e = [char]27
+"$e[62m"
+
+
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>ideogramReset</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Ideogram Reset Escape Sequence
+.DESCRIPTION
+    Escape Sequence for Ideogram Reset
+    
+    Ideogram escape sequences are supported in some loclized terminals.
+#&gt;
+param()
+$e = [char]27
+"$e[65m"
+
+
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>ideogramStress</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Ideogram Stress Escape Sequence
+.DESCRIPTION
+    Escape Sequence for Ideogram Stress
+    
+    Ideogram escape sequences are supported in some loclized terminals.
+#&gt;
+param()
+$e = [char]27
+"$e[64m"
+
+
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>ideogramUnderline</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Ideogram Underline Escape Sequence
+.DESCRIPTION
+    Escape Sequence for Ideogram Underline
+    
+    Ideogram escape sequences are supported in some loclized terminals.
+#&gt;
+param()
+$e = [char]27
+"$e[60m"
+
+
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>italic</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Italic Escape Sequence
+.DESCRIPTION
+    Escape Sequence for italics 
+.LINK
+    https://en.wikipedia.org/wiki/ANSI_escape_code
+#&gt;
+param()
+
+$e = [char]27
+"$e[3m"
+
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>italicOff</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Italic Off Escape Sequence
+.DESCRIPTION
+    Escape Sequence for italics off
+.LINK
+    https://en.wikipedia.org/wiki/ANSI_escape_code
+#&gt;
+param()
+
+$e = [char]27
+"$e[23m"
+
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>lastLine</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Last Line Escape Sequence
+.DESCRIPTION
+    Escape Sequence for last line.  
+    
+    Moves to the start of the previous line.
+.LINK
+    https://en.wikipedia.org/wiki/C0_and_C1_control_codes
+.NOTES
+
+#&gt;
+param()
+
+$e = [char]27
+"${e}M"
+
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>musicNote</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Music Note Escape Sequence
+.DESCRIPTION
+    Escape sequence for musical notes.
+    
+    Plays one or more notes in a limited range, for a specified duration (rounded to the nearest 32nd of a second)
+.NOTES
+    These notes will only work in a limited number of terminals.
+    
+    These notes have a limited two-octave range.
+#&gt;
+[Alias('Notes')]
+param(
+# One or more notes.
+[Alias('Notes')]
+[ValidateSet(
+    'REST', 
+    'C5', 'C#5', 'D5', 'D#5', 'E5', 'F5', 'F#5', 'G5', 'G#5', 'A5', 'A#5', 'B5',
+    'C6', 'C#6', 'D6', 'D#6', 'E6', 'F6', 'F#6', 'G6', 'G#6', 'A6', 'A#6', 'B6',
+    'C7'
+)]
+[string[]]
+$Note = 'C5',
+
+# The duration to play the note.
+[Alias('NoteTiming')]
+[timespan]
+$Duration = $([Timespan]::FromMilliseconds(1000  * 8/32 )),
+
+# The volume of the note (default 3)
+[Alias('NoteVolume')]
+[ValidateRange(0,7)]
+[int]
+$Volume = 3
+)
+
+$duration32nds = [Math]::Round($Duration.TotalMilliseconds / (1/32 * 1000))
+$noteValues = $MyInvocation.MyCommand.Parameters.Note.Attributes.ValidValues
+$notes = @(
+    foreach ($n in $note) {
+        $noteValues.IndexOf($n.ToUpper())
+    }
+) -join ';'
+
+$e =[char]27
+"$e[$volume;$duration32nds;$notes,~"
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>nextLine</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Next Line Escape Sequence
+.DESCRIPTION
+    Escape Sequence for next line.  
+    
+    Moves to the start of the next line.
+    
+    Equivalent to a newline and a carriage return.
+.LINK
+    https://en.wikipedia.org/wiki/C0_and_C1_control_codes
+#&gt;
+param()
+
+$e = [char]27
+"${e}E"
+
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>normalIntensity</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Normal Intensity Escape Sequence
+.DESCRIPTION
+    Escape Sequence to use normal font intensity
+.LINK
+    https://en.wikipedia.org/wiki/ANSI_escape_code
+#&gt;
+param(
+[switch]
+$Rapid
+)
+
+$e = [char]27
+"$e[22m"
+
+
+
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>normalscript</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Normal Script Escape Sequence
+.DESCRIPTION
+    Escape Sequence for neither superscript not subscript
+.LINK
+    https://en.wikipedia.org/wiki/ANSI_escape_code
+.NOTES
+    Implemented in mintty
+#&gt;
+param()
+
+$e = [char]27
+"$e[75m"
+
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>notFramed</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Not Framed Escape Sequence
+.DESCRIPTION
+    Escape Sequence for neither framed nor encircled
+.LINK
+    https://en.wikipedia.org/wiki/ANSI_escape_code
+.NOTES
+    Not supported by most terminals.  Used for Emoji variation selection in mintty.
+#&gt;
+param()
+
+$e = [char]27
+"$e[54m"
+
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>overline</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Overline Escape Sequence
+.DESCRIPTION
+    Escape Sequence for overline
+.LINK
+    https://en.wikipedia.org/wiki/ANSI_escape_code
+#&gt;
+param()
+
+$e = [char]27
+"$e[53m"
+
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>overlineOff</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Overline Off Escape Sequence
+.DESCRIPTION
+    Escape Sequence for overline off
+.LINK
+    https://en.wikipedia.org/wiki/ANSI_escape_code
+#&gt;
+param()
+
+$e = [char]27
+"$e[55m"
+
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>proportionalSpacing</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Proportial Spacing Escape Sequence
+.DESCRIPTION
+    Escape Sequence to stop Proportial Spacing
+.NOTES
+    Unused in modern terminals
+.LINK
+    https://en.wikipedia.org/wiki/ANSI_escape_code
+#&gt;
+param()
+
+$e = [char]27
+"$e[26m"
+
+
+
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>proportionalSpacingOff</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Proportial Spacing Off Escape Sequence
+.DESCRIPTION
+    Escape Sequence to stop Proportial Spacing
+.NOTES
+    Unused in modern terminals
+.LINK
+    https://en.wikipedia.org/wiki/ANSI_escape_code
+#&gt;
+param()
+
+$e = [char]27
+"$e[26m"
+
+
+
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>reset</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Reset Escape Sequence
+.DESCRIPTION
+    Escape Sequence for reset
+.LINK
+    https://en.wikipedia.org/wiki/ANSI_escape_code
+#&gt;
+param(
+)
+
+$e = [char]27
+"$e[0m"
+
+
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>reveal</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Reveal Escape Sequence
+.DESCRIPTION
+    Escape Sequence for to disable concealed content
+.LINK
+    https://en.wikipedia.org/wiki/ANSI_escape_code
+#&gt;
+param(
+)
+
+$e = [char]27
+"$e[28m"
+
+
+
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>reverse</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Invert Escape Sequence
+.DESCRIPTION
+    Escape Sequence for invert
+.LINK
+    https://en.wikipedia.org/wiki/ANSI_escape_code
+#&gt;
+param(
+)
+
+$e = [char]27
+"$e[7m"
+
+
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>reverseOff</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Reverse Off Escape Sequence
+.DESCRIPTION
+    Escape Sequence for stopping color reversal (inversion) in text
+.LINK
+    https://en.wikipedia.org/wiki/ANSI_escape_code
+#&gt;
+param(
+)
+
+$e = [char]27
+"$e[27m"
+
+
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>screenAlignmentPattern</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Screen Alignment Pattern Escape sequence
+.DESCRIPTION
+    Escape Sequence for the Screen Alignment Pattern.
+
+    This is normally a screen full of "E" characters.
+.NOTES
+    Implemented more places than you would expect.
+
+    Normally prints a screen full of "E" characters, 
+    but some hosts (like VSCode) may temporarily show alignment gridlines in other areas of the UI.
+.LINK
+    https://web.mit.edu/dosathena/doc/www/ek-vt520-rm.pdf
+#&gt;
+param()
+$e = [char]27
+"$e#8"
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>scrollDown</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Scroll Down Escape Sequence
+.DESCRIPTION
+    Escape Sequence for Scroll Down
+.LINK
+    https://en.wikipedia.org/wiki/ANSI_escape_code
+#&gt;
+param(
+[int]$PageCount = $(
+    if ("$($this.input)" -as [int]) {
+        "$($this.input)"
+    } else {
+        1
+    }
+)
+)
+
+$e = [char]27
+if ($pageCount -ge 0) {
+    "$e[${PageCount}T"
+} else {
+    "$e[${PageCount}S"
+}
+
+
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>scrollUp</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Scroll Up Escape Sequence
+.DESCRIPTION
+    Escape Sequence for Scroll Up
+.LINK
+    https://en.wikipedia.org/wiki/ANSI_escape_code
+#&gt;
+param(
+[int]$PageCount = $(
+    if ("$($this.input)" -as [int]) {
+        "$($this.input)"
+    } else {
+        1
+    }
+)
+)
+$e = [char]27
+if ($PageCount -ge 0) {    
+    "$e[${PageCount}S"
+} else {
+    "$e[${PageCount}T"
+}
+
+
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>setColor</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Set Color Escape Sequence
+.DESCRIPTION
+    Escape Sequence to Set Colors.
+
+    This accepts a number and a color to change.
+.NOTES
+    Not all numbers are supported in all terminals.    
+
+    * 0-7 are the normal intensity colors
+    * 8-15 are the high intensity colors        
+    * 16-231 default to a 6x6x6 color cube
+    * 232-255 are a greyscale ramp, without black or white
+    * Additional numbers may be used for any purpose perscribed by the terminal
+#&gt;
+param(
+# The number of the color to set
+[int]
+$Number = $(
+    $num, $null = @($this.Input)
+    if ($num) {
+        $num 
+    }
+),
+
+# The color to set.
+[ValidatePattern('^(?&gt;random|\#[0-9a-f]{6})$')]
+[string]
+$Color = $(
+    $null, $color, $null = @($this.Input)
+    $color
+)
+)
+
+if (-not $color) { return }
+if ($color -eq 'random') {
+    $color = '#{0:x6}' -f (Get-Random -Max 0xffffff)
+}
+
+$r, $g, $b = 
+    $Color.Substring(1,2),
+    $Color.Substring(3,2),
+    $Color.Substring(5,2)
+
+$e = [char]27
+"$e]4;$Number;rgb:$r/$g/$b$e\" 
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>setTabBackgroundColor</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Set tab background color escape sequence
+.DESCRIPTION
+    Escape sequence to set the tab background color
+#&gt;
+param(
+[ValidatePattern('^(?&gt;random|\#[0-9a-f]{6})$')]
+[string]
+$TabColor = "$($this.Input)"
+)
+
+if ($tabColor -eq 'random') {
+    $TabColor = "#{0:x6}" -f (Get-Random -Max 0xffffff)
+}
+
+if (-not $tabColor) { return }
+
+$r, $g, $b = 
+    $TabColor.Substring(1,2),
+    $TabColor.Substring(3,2),
+    $TabColor.Substring(5,2)
+
+$e = [char]27
+"$e]4;264;rgb:$r/$g/$b$e\" 
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>setTabForegroundColor</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Tab Foreground Color Escape Sequence
+.DESCRIPTION
+    Escape Sequence for setting Tab Foreground Color
+.NOTES
+    This works in a few terminals.
+#&gt;
+param(
+[ValidatePattern('^(?&gt;random|\#[0-9a-f]{6})$')]
+[string]
+$TabColor = "$($this.Input)"
+)
+
+if ($tabColor -eq 'random') {
+    $TabColor = "#{0:x6}" -f (Get-Random -Max 0xffffff)
+}
+
+$r, $g, $b = 
+    $TabColor.Substring(1,2),
+    $TabColor.Substring(3,2),
+    $TabColor.Substring(5,2)
+
+$e = [char]27
+"$e]4;263;rgb:$r/$g/$b$e\" 
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>subscript</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Subscript Escape Sequence
+.DESCRIPTION
+    Escape Sequence for subscript
+.LINK
+    https://en.wikipedia.org/wiki/ANSI_escape_code
+.NOTES
+    Implemented in mintty
+#&gt;
+param()
+
+$e = [char]27
+"$e[74m"
+
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>superscript</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Superscript Escape Sequence
+.DESCRIPTION
+    Escape Sequence for superscript
+.LINK
+    https://en.wikipedia.org/wiki/ANSI_escape_code
+.NOTES
+    Implemented in mintty
+#&gt;
+param()
+
+$e = [char]27
+"$e[73m"
+
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>underline</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Underline Escape Sequence
+.DESCRIPTION
+    Escape Sequence for underline
+.LINK
+    https://en.wikipedia.org/wiki/ANSI_escape_code
+#&gt;
+param()
+
+$e = [char]27
+"$e[4m"
+
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>underlineColor</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Underline Color Escape Sequence
+.DESCRIPTION
+    Escape Sequence to set Underline Color  
+.LINK
+    https://en.wikipedia.org/wiki/ANSI_escape_code
+#&gt;
+param(
+[PSObject]
+$Color = $(
+    if ($null -ne $this.Input -as [byte]) {
+        $this.Input -as [byte]
+    } elseif ($this.Input -and 
+        $this.Input -match '^#[a-f0-9]{6}$') {
+        $this.Input
+    } else {
+        15
+    }
+)
+)
+
+$e = [char]27
+if ($null -ne $color -as [byte]) {
+    "$e[58;5;${color}m"
+} elseif (
+    $color -match '^#[a-f0-9]{6}$' -or
+    $color -match '^random$'
+) {
+    if ($matches[0] -eq 'random') {
+        $color = ("#{0:x6}" -f (Get-Random -Maximum 0xffffff))
+    }    
+    $r, $g, $b = 
+        $Color.Substring(1,2),
+        $Color.Substring(3,2),
+        $Color.Substring(5,2)
+
+    "$e[58;2;$(
+        @(
+            "0x$r" -as [byte]
+            "0x$g" -as [byte]
+            "0x$b" -as [byte]
+        ) -join ';'            
+    )m"
+}
+
+
+
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>underlineDefault</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Underline Default Escape Sequence
+.DESCRIPTION
+    Escape Sequence for underline default coloring
+.LINK
+    https://en.wikipedia.org/wiki/ANSI_escape_code
+#&gt;
+param()
+
+$e = [char]27
+"$e[59m"
+
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>underlineOff</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Underline off Escape Sequence
+.DESCRIPTION
+    Escape Sequence to stop underlining
+.LINK
+    https://en.wikipedia.org/wiki/ANSI_escape_code
+#&gt;
+param(
+[switch]
+$Rapid
+)
+
+$e = [char]27
+"$e[24m"
+
+
+
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>xml</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Escapes xml
+.DESCRIPTION
+    Escapes content into valid xml content.
+.EXAMPLE
+    ./xml.ps1 "&lt;not a tag&gt;"
+#&gt;
+param(
+[string]
+$Content = "$($this.Input)"
+)
+
+[Web.HttpUtility]::HtmlEncode($Content)
+
+                    </Script>
+      </ScriptMethod>
+    </Members>
+  </Type>
+</Types>
