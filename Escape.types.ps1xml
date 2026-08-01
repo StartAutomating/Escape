@@ -2046,6 +2046,54 @@ $e = [char]27
                     </Script>
       </ScriptMethod>
       <ScriptMethod>
+        <Name>lineWidthDouble</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Line width double
+.DESCRIPTION
+    Escape sequence for double line width.
+
+    This will draw the line using double character width.
+.NOTES
+    This is not supported in all terminals.
+.EXAMPLE
+    "$(escape lineWidthNormal)Hello World"
+    "$(escape lineWidthDouble)Hello World"
+.LINK
+    https://en.wikipedia.org/wiki/ANSI_escape_code#nF_Escape_sequences
+#&gt;
+param()
+
+"$([char]27)#6"
+
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>lineWidthNormal</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Line width normal
+.DESCRIPTION
+    Escape sequence for normal line width.
+
+    This will draw the line using the normal character width.
+.NOTES
+    This is not supported in all terminals.
+.EXAMPLE
+    "$(escape lineWidthNormal)Hello World"
+    "$(escape lineWidthDouble)Hello World"
+.LINK
+    https://en.wikipedia.org/wiki/ANSI_escape_code#nF_Escape_sequences
+#&gt;
+param()
+
+"$([char]27)#5"
+
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
         <Name>musicNote</Name>
         <Script>
                         &lt;#
