@@ -21,7 +21,7 @@ $Color = $(
 )
 
 $e = [char]27
-if ($null -ne $color -as [byte]) {
+if ($null -ne ($color -as [byte])) {
     "$e[48;5;${color}m"
 } elseif (
     $color -match '^#[a-f0-9]{6}$' -or
@@ -40,7 +40,7 @@ if ($null -ne $color -as [byte]) {
             "0x$r" -as [byte]
             "0x$g" -as [byte]
             "0x$b" -as [byte]
-        ) -join ';'            
+        ) -join ';'
     )m"
 }
 

@@ -1,3 +1,19 @@
+# CHANGELOG
+
+## Escape 0.1.1
+
+* Fixes:
+  * BackgroundColor Full RGB Fix (#130)
+  * ForegroundColor Full RGB Fix (#131)
+* New Escape Sequences:
+  * `cursorPosition` (#132)
+  * `doubleHeightLetterTop` (#133)
+  * `doubleHeightLetterBottom` (#134)
+  * `lineWidthNormal` (#135)
+  * `lineWidthDouble` (#136)
+
+---
+
 ## Escape 0.1
 
 Initial Release of Escape module

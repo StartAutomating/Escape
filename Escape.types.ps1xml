@@ -276,7 +276,7 @@ $Color = $(
 )
 
 $e = [char]27
-if ($null -ne $color -as [byte]) {
+if ($null -ne ($color -as [byte])) {
     "$e[48;5;${color}m"
 } elseif (
     $color -match '^#[a-f0-9]{6}$' -or
@@ -295,7 +295,7 @@ if ($null -ne $color -as [byte]) {
             "0x$r" -as [byte]
             "0x$g" -as [byte]
             "0x$b" -as [byte]
-        ) -join ';'            
+        ) -join ';'
     )m"
 }
 
@@ -911,6 +911,28 @@ if ($LineCount -gt 0) {
                     </Script>
       </ScriptMethod>
       <ScriptMethod>
+        <Name>cursorPosition</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Set Cursor Position
+.DESCRIPTION
+    Escape Sequence for Set Cursor Position
+.LINK
+    https://en.wikipedia.org/wiki/ANSI_escape_code
+#&gt;
+param(
+# The row.
+[int]$Row = 1,
+# The column.
+[int]$Column = 1
+)
+
+$e = [char]27
+"$e[${Row};${column}H"
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
         <Name>cursorPreviousLine</Name>
         <Script>
                         &lt;#
@@ -1266,6 +1288,53 @@ $e = [char]27
                     </Script>
       </ScriptMethod>
       <ScriptMethod>
+        <Name>doubleHeightLetterBottom</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Double height letter bottom
+.DESCRIPTION
+    Escape sequence for double height letter bottom.
+
+    This will draw the bottom half of characters at double height.
+.NOTES
+    This is not supported in all terminals.
+.EXAMPLE
+    @(
+        "$(escape doubleHeightLetterTop)Hello World"
+        "$(escape doubleHeightLetterBottom)Hello World"
+    ) -join [Environment]::Newline
+#&gt;
+param()
+
+"$([char]27)#4"
+
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>doubleHeightLetterTop</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Double height letter top
+.DESCRIPTION
+    Escape sequence for double height letter top.
+
+    This will draw the top half of characters at double height.
+.NOTES
+    This is not supported in all terminals.
+.EXAMPLE
+    @(
+        "$(escape doubleHeightLetterTop)Hello World"
+        "$(escape doubleHeightLetterBottom)Hello World"
+    ) -join [Environment]::Newline
+#&gt;
+param()
+
+"$([char]27)#3"
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
         <Name>doubleUnderline</Name>
         <Script>
                         &lt;#
@@ -1583,7 +1652,7 @@ $Color = $(
 )
 
 $e = [char]27
-if ($null -ne $color -as [byte]) {
+if ($null -ne ($color -as [byte])) {
     "$e[38;5;${color}m"
 } elseif (
     $color -match '^#[a-f0-9]{6}$' -or
@@ -1973,6 +2042,54 @@ param()
 
 $e = [char]27
 "${e}M"
+
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>lineWidthDouble</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Line width double
+.DESCRIPTION
+    Escape sequence for double line width.
+
+    This will draw the line using double character width.
+.NOTES
+    This is not supported in all terminals.
+.EXAMPLE
+    "$(escape lineWidthNormal)Hello World"
+    "$(escape lineWidthDouble)Hello World"
+.LINK
+    https://en.wikipedia.org/wiki/ANSI_escape_code#nF_Escape_sequences
+#&gt;
+param()
+
+"$([char]27)#6"
+
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>lineWidthNormal</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Line width normal
+.DESCRIPTION
+    Escape sequence for normal line width.
+
+    This will draw the line using the normal character width.
+.NOTES
+    This is not supported in all terminals.
+.EXAMPLE
+    "$(escape lineWidthNormal)Hello World"
+    "$(escape lineWidthDouble)Hello World"
+.LINK
+    https://en.wikipedia.org/wiki/ANSI_escape_code#nF_Escape_sequences
+#&gt;
+param()
+
+"$([char]27)#5"
 
                     </Script>
       </ScriptMethod>
