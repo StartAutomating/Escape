@@ -8,10 +8,11 @@
 .NOTES
     This is not supported in all terminals.
 .EXAMPLE
-    escape doubleHeightLetterTop "Hello world"
-    escape doubleHeightLetterBottom "Hello world"    
+    @(
+        "$(escape doubleHeightLetterTop)Hello World"
+        "$(escape doubleHeightLetterBottom)Hello World"
+    ) -join [Environment]::Newline
 #>
 param()
 
-$e = [char]27
-"$e#4"
+"$([char]27)#4"

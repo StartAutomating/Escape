@@ -7,8 +7,12 @@
     This will draw the top half of characters at double height.
 .NOTES
     This is not supported in all terminals.
+.EXAMPLE
+    @(
+        "$(escape doubleHeightLetterTop)Hello World"
+        "$(escape doubleHeightLetterBottom)Hello World"
+    ) -join [Environment]::Newline
 #>
 param()
 
-$e = [char]27
-"$e#3"
+"$([char]27)#3"
