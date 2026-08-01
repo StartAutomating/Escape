@@ -1288,6 +1288,29 @@ $e = [char]27
                     </Script>
       </ScriptMethod>
       <ScriptMethod>
+        <Name>doubleHeightLetterBottom</Name>
+        <Script>
+                        &lt;#
+.SYNOPSIS
+    Double height letter bottom
+.DESCRIPTION
+    Escape sequence for double height letter bottom.
+
+    This will draw the bottom half of characters at double height.
+.NOTES
+    This is not supported in all terminals.
+.EXAMPLE
+    escape doubleHeightLetterTop "Hello world"
+    escape doubleHeightLetterBottom "Hello world"    
+#&gt;
+param()
+
+$e = [char]27
+"$e#4"
+
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
         <Name>doubleHeightLetterTop</Name>
         <Script>
                         &lt;#
