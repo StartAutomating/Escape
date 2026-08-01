@@ -245,7 +245,9 @@ escape @(
 |[cursorForward](Types/Escape.Sequence/cursorForward.ps1)|ScriptMethod|
 |[cursorHide](Types/Escape.Sequence/cursorHide.ps1)|ScriptMethod|
 |[cursorNextLine](Types/Escape.Sequence/cursorNextLine.ps1)|ScriptMethod|
+|[cursorPosition](Types/Escape.Sequence/cursorPosition.ps1)|ScriptMethod|
 |[cursorPreviousLine](Types/Escape.Sequence/cursorPreviousLine.ps1)|ScriptMethod|
+|[cursorRelativeLine](Types/Escape.Sequence/cursorRelativeLine.ps1)|ScriptMethod|
 |[cursorRestore](Types/Escape.Sequence/cursorRestore.ps1)|ScriptMethod|
 |[cursorSave](Types/Escape.Sequence/cursorSave.ps1)|ScriptMethod|
 |[cursorShapeBar](Types/Escape.Sequence/cursorShapeBar.ps1)|ScriptMethod|
@@ -259,6 +261,8 @@ escape @(
 |[cursorUp](Types/Escape.Sequence/cursorUp.ps1)|ScriptMethod|
 |[disableAlternateScreenBuffer](Types/Escape.Sequence/disableAlternateScreenBuffer.ps1)|ScriptMethod|
 |[disableReportingFocus](Types/Escape.Sequence/disableReportingFocus.ps1)|ScriptMethod|
+|[doubleHeightLetterBottom](Types/Escape.Sequence/doubleHeightLetterBottom.ps1)|ScriptMethod|
+|[doubleHeightLetterTop](Types/Escape.Sequence/doubleHeightLetterTop.ps1)|ScriptMethod|
 |[doubleUnderline](Types/Escape.Sequence/doubleUnderline.ps1)|ScriptMethod|
 |[enableAlternateScreenBuffer](Types/Escape.Sequence/enableAlternateScreenBuffer.ps1)|ScriptMethod|
 |[enableReportingFocus](Types/Escape.Sequence/enableReportingFocus.ps1)|ScriptMethod|
@@ -296,6 +300,8 @@ escape @(
 |[italic](Types/Escape.Sequence/italic.ps1)|ScriptMethod|
 |[italicOff](Types/Escape.Sequence/italicOff.ps1)|ScriptMethod|
 |[lastLine](Types/Escape.Sequence/lastLine.ps1)|ScriptMethod|
+|[lineWidthDouble](Types/Escape.Sequence/lineWidthDouble.ps1)|ScriptMethod|
+|[lineWidthNormal](Types/Escape.Sequence/lineWidthNormal.ps1)|ScriptMethod|
 |[musicNote](Types/Escape.Sequence/musicNote.ps1)|ScriptMethod|
 |[nextLine](Types/Escape.Sequence/nextLine.ps1)|ScriptMethod|
 |[normalIntensity](Types/Escape.Sequence/normalIntensity.ps1)|ScriptMethod|
